@@ -8,7 +8,7 @@ fi
 echo $CLASSPATH | grep "VisualDCT\.jar" > /dev/null
 if (( $? == 1 )); then
     if [ -f "$VDCT_HOME/VisualDCT.jar" ]; then
-        CLASSPATH="$CLASSPATH:$VDCT_HOME/VisualDCT.jar"
+        CLASSPATH="${CLASSPATH:+${CLASSPATH}:}$VDCT_HOME/VisualDCT.jar"
     else
         echo "VisualDCT.jar not found in $VDCT_HOME."
         exit 1
