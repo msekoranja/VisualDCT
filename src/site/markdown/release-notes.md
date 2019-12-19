@@ -1,7 +1,13 @@
 # Release Notes
 
-## 2.8.2 (not released yet)
-[View diff](https://github.com/epics-extensions/VisualDCT/compare/v2.8.1...master)
+## 2.8.3 (not released yet)
+[View diff](https://github.com/epics-extensions/VisualDCT/compare/v2.8.2...master)
+
+## 2.8.2 (19 Dec 2019)
+[View diff](https://github.com/epics-extensions/VisualDCT/compare/v2.8.1...v2.8.2)
+
+ * Bugfix: Consider empty CLASSPATH in wrapper script (#25)
+ * Fix AWT exception under openjdk / Java 11 (#26)
 
 ## 2.8.1 (04 Sep 2018)
 [View diff](https://github.com/epics-extensions/VisualDCT/compare/v2.8.0...v2.8.1)
