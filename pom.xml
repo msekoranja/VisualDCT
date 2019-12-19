@@ -57,7 +57,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.46</version>
+            <version>5.1.48</version>
         </dependency>
     </dependencies>
 
@@ -66,7 +66,7 @@
 
             <plugin>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.1.2</version>
                 <configuration>
                     <archive>
                         <manifest>
@@ -81,7 +81,7 @@
             
             <plugin>
               <artifactId>maven-compiler-plugin</artifactId>
-              <version>3.8.0</version>
+              <version>3.8.1</version>
             </plugin>
 
             <plugin>
@@ -112,7 +112,7 @@
 
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.1.1</version>
                 <configuration>
                     <descriptors>
                         <descriptor>src/assembly/dist.xml</descriptor>
