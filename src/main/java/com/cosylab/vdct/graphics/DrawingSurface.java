@@ -3480,7 +3480,7 @@ MouseInputListener, Runnable, LinkCommandInterface {
 				(canvasSize.width!=width) || 
 				(canvasSize.height!=height)) {
 
-			if (width == 0 || height == 0) return;
+			if (width <= 0 || height <= 0) return;
 
 			if (getWorkspacePanel() != null) {
 				canvasImage = getWorkspacePanel().createImage(width, height);
