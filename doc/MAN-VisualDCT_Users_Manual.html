@@ -1,0 +1,1268 @@
+<html xmlns:d="urn:schemas-cosylab-com:Document">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>VisualDCT User's Manual</title>
+<style>.title 
+{
+  color: #CE2B25; 
+  font-size: 200%;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+  color: #003c8c;
+  text-align: left; 
+  margin-top: 2em; 
+  margin-bottom: 1em; 
+  font-family: Verdana, Arial, Helvetica; 
+}
+
+h2 
+{ 
+  color: #CE2B25; 
+}
+
+h1.toc, h2.toc, h3.toc, h4.toc, h5.toc, h6.toc
+{
+  color: #003c8c;
+  font-size: small;
+  text-align: left;
+  margin-right: 0%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+h1.toc
+{
+  margin-left: 3%;
+  font-weight: bold;
+}
+
+h2.toc
+{
+  margin-left: 6%;
+}
+
+h3.toc
+{
+  margin-left: 9%;
+}
+
+h4.toc
+{
+  margin-left: 12%;
+}
+
+h5.toc
+{
+  margin-left: 15%;
+}
+
+h6.toc
+{
+  margin-left: 18%;
+}
+
+body 
+{
+  margin-left: 5%; 
+  margin-right: 5%;
+}
+
+p
+{
+  font-family: Verdana, Arial, Helvetica;
+}
+
+p.table
+{
+  text-align: left;
+  margin-bottom: 0cm;
+}
+
+p.figure
+{ 
+  text-align: center
+}
+
+p
+{
+  text-align: justify;
+}
+
+p.comment
+{
+  color: red;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+p.warning
+{
+  background-color: #E0E0E0;
+}
+
+p.warning table tr td
+{
+  border-width: 0.02cm; 
+  border-color: red;
+}
+
+p.notice
+{
+  background-color: #F0F0F0;
+}
+
+p.notice table tr td
+{
+  border-width: 0.02cm; 
+  border-color: black;
+}
+
+ol, ul
+{
+  font-family: verdana,sans-serif;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 0%;
+}
+
+pre
+{
+  background: #F0F0F0;
+}
+
+table
+{
+  width: 100%;
+  margin-bottom: 0cm;
+}
+
+th
+{ 
+  padding: 0.1cm;
+  background: #CACAD4; 
+  text-align: center; 
+  border-style: solid; 
+  border-width: 0.02cm;
+}
+
+th.header
+{
+  background: #D0D0D0;
+}
+
+td
+{
+  padding: 0.1cm;
+  border-style: solid;
+  border-width: 0.02cm;
+}
+
+table.equation tr td
+{
+  border-width: 0;
+}
+
+tr.reviewAccepted 
+{
+  background: #D0FFD0;
+}
+
+tr.reviewRejected
+{
+  background: #FFD0D0;
+}
+
+tr.retirement
+{
+  background: black;
+  color: white
+}
+
+span.menu
+{
+  color: white;
+  background: #787996;
+  font-family: tahoma;
+  font-size: 80%;
+}
+
+span.gui
+{
+  border-left-width: 0.025cm;
+  border-top-width: 0.025cm;
+  border-right-width: 0.04cm;
+  border-bottom-width: 0.04cm;
+  border-style: solid;
+  font-family: tahoma;
+  font-size: 80%
+}
+
+span.keystroke
+{            
+  border-style: groove;
+  border-color: #E0E0E0;
+  font-family: tahoma;
+  font-size: 70%;
+}
+
+span.emphasis
+{
+  font-style: italic;
+}
+
+span.bold
+{
+  font-weight: bold;
+}
+
+tt.filename
+{
+  font-family: tahoma;
+}
+
+tt.keyword
+{
+  font-weight: bold;
+}
+
+tt.command
+{
+  font-family: tahoma; 
+  font-weight: bold;
+}
+
+p.description 
+{
+  text-align: center;
+  margin-top: 0cm;
+}
+</style>
+</head>
+<script language="JavaScript"><!--
+        function mailTo(part2, part1) {
+          window.location.href = "mailto:" + part1 + part2;
+        }
+
+        function fullMailTo(part2, part1, subject, body) {
+          var i;
+          var body2 = "";
+
+          for(i = 0; i < body.length; ++i)
+          {
+            if(body.charAt(i) == '\n')
+            {
+              body2 += "%0d%0a";
+            }
+            else
+            {
+              body2 += body.charAt(i);
+            }
+          }
+          
+          window.location.href = "mailto:" + part1 + part2 + "?subject=" + subject + "&body=" + body2;
+        }
+      --></script>
+<body>
+<p class="table">
+<table>
+<tr>
+<th colspan="2" class="title">VisualDCT User's Manual</th>
+</tr>
+<tr>
+<th class="projectInfo">Project:</th><td>VisualDCT&nbsp;</td>
+</tr>
+<tr>
+<th class="projectInfo">Classification:</th><td>User's Manual</td>
+</tr>
+<tr>
+<th class="projectInfo">Identification:</th><td><tt>CSL-MAN-02-xxxxxx</tt></td>
+</tr>
+<tr>
+<th colspan="2">Copyright © 2002 by Cosylab Ltd. All Rights Reserved.</th>
+</tr>
+</table>
+</p>
+<h2>Document History</h2>
+<p class="table">
+<table>
+<tr>
+<th>Revision</th><th>Date</th><th>Author</th><th>Section</th><th>Modification</th>
+</tr>
+<tr>
+<td rowspan="2">1.0</td><td rowspan="2">2002-10-19</td><td rowspan="2"><a href="javascript:mailTo(%22j.sekoranja@cosylab.com%22,%22mate%22);">Matej Sekoranja</a></td>
+</tr>
+<tr>
+<td>all</td><td>Created.</td>
+</tr>
+<tr>
+<td>1.1</td><td>2002-10-22</td><td><a href="javascript:mailTo(%22j.sekoranja@cosylab.com%22,%22mate%22);">Matej Sekoranja</a></td><td colspan="2"><b>Released</b></td>
+</tr>
+<tr>
+<td rowspan="2">1.2</td><td rowspan="2">2003-07-18</td><td rowspan="2"><a href="javascript:mailTo(%22j.sekoranja@cosylab.com%22,%22mate%22);">Matej Sekoranja</a></td>
+</tr>
+<tr>
+<td>all</td><td>Updated hierarchy related sections of manual.</td>
+</tr>
+<tr>
+<td rowspan="2">1.3</td><td rowspan="2">2004-07-26</td><td rowspan="2">&nbsp;ilist</td>
+</tr>
+<tr>
+<td>all</td><td>Added section about command line tool for generating flat databases.</td>
+</tr>
+<tr>
+<td rowspan="2">1.4</td><td rowspan="2">2004-11-16</td><td rowspan="2"><a href="javascript:mailTo(%22j.sekoranja@cosylab.com%22,%22mate%22);">Matej Sekoranja</a></td>
+</tr>
+<tr>
+<td>all</td><td>Added details on VDCT configuration to running section.</td>
+</tr>
+<tr>
+<td rowspan="2">1.5</td><td rowspan="2">2005-08-21</td><td rowspan="2"><a href="javascript:mailTo(%22j.sekoranja@cosylab.com%22,%22mate%22);">Matej Sekoranja</a></td>
+</tr>
+<tr>
+<td>all</td><td>Added descriptions on new VDCT features.</td>
+</tr>
+</table>
+</p>
+<h2>Scope</h2>
+<p>
+<scope xmlns="urn:schemas-cosylab-com:Document">
+			This document is a users manual of how to use VisualDCT and also contains some tips and ticks.
+		</scope>
+</p>
+<h2>Confidentiality</h2>
+<p>
+          This document is classified as a <b>public document</b>.
+          Redistribution and use, with or without modification, are permitted provided that:
+          <ol>
+<li>the copyright notice is retained</li>
+<li>a reference to the original document is made in case of modifications</li>
+<li>this document may not be distributed for profit except as explicitly permitted by valid licenses.</li>
+</ol>
+</p>
+<h2>
+<a name="Audience">Audience</a>
+</h2>
+<p>
+<audience>
+			The audience of this document are all users of VisualDCT.
+		</audience>
+</p>
+<h2>References</h2>
+<p class="table">
+<table>
+<tr>
+<th>ID</th><th>Author</th><th>Reference</th><th>Revision</th><th>Date</th><th>Publisher</th>
+</tr>
+<tr>
+<td><a name="visualdct">1</a></td><td>Matej Sekoranja</td><td><a target="_blank" href="http://visualdct.cosylab.com/">VisualDCT Project</a></td><td> </td><td>2003</td><td>Cosylab, Ltd.</td>
+</tr>
+<tr>
+<td><a name="visualdct_latest">2</a></td><td>Matej Sekoranja</td><td><a target="_blank" href="http://visualdct.cosylab.com/builds/VisualDCT/">VisualDCT latest build</a></td><td>2.5.1263</td><td>2004</td><td>Cosylab, Ltd.</td>
+</tr>
+<tr>
+<td><a name="vdct_installation">3</a></td><td>Matej Sekoranja</td><td><a target="_blank" href="DOC-Java_Installation_and_Build_Process_of_VisualDCT.html">Java Installation and Build Process of VisualDCT</a></td><td> </td><td>2002</td><td>Cosylab, Ltd.</td>
+</tr>
+<tr>
+<td><a name="hierarchies">4</a></td><td>Matej Sekoranja</td><td><a target="_blank" href="DES-VisualDCT_EPICS_Databases_Hierarchy_Support.html">VisualDCT EPICS Databases Hierarchy Support</a></td><td> </td><td>2002</td><td>Cosylab, Ltd.</td>
+</tr>
+<tr>
+<td><a name="vdct_hierarchy_additions">5</a></td><td>Matej Sekoranja</td><td><a target="_blank" href="SPE-VisualDCT_Hierarchy_Additions.html">VisualDCT Hierarchy Additions</a></td><td> </td><td>2003</td><td>Cosylab, Ltd.</td>
+</tr>
+<tr>
+<td><a name="plugins">6</a></td><td>Sunil Sah</td><td><a target="_blank" href="DOC-VisualDCT_Plugins.html">VisualDCT Plugins</a></td><td> </td><td>2002</td><td>Cosylab, Ltd.</td>
+</tr>
+</table>
+</p>
+<h2>
+<a name="toc">Table of Contents</a>
+</h2>
+<a href="#intro">
+<h1 class="toc">1. Introduction</h1>
+</a><a href="#basic">
+<h1 class="toc">2. Basic principles</h1>
+</a><a href="#running">
+<h1 class="toc">3. Running VisualDCT</h1>
+</a><a href="#flatdb">
+<h1 class="toc">4. Command Line Tool for Generating Flat Databases</h1>
+</a><a href="#hierarchies">
+<h1 class="toc">5. Hierarchy support</h1>
+</a><a href="#features">
+<h1 class="toc">6. Features</h1>
+</a><a href="#rdd">
+<h2 class="toc">6.1. Rapid Database Development (RDD)</h2>
+</a><a href="#parser">
+<h2 class="toc">6.2. Database file parser, input/output file</h2>
+</a><a href="#representation">
+<h2 class="toc">6.3. Visual representation of objects</h2>
+</a><a href="#record">
+<h3 class="toc">6.3.1. Record</h3>
+</a><a href="#group">
+<h3 class="toc">6.3.2. Group</h3>
+</a><a href="#templateInstance">
+<h3 class="toc">6.3.3. Template Instance</h3>
+</a><a href="#links">
+<h3 class="toc">6.3.4. Links</h3>
+</a><a href="#other">
+<h3 class="toc">6.3.5. Other Graphical Objects</h3>
+</a><a href="#linking">
+<h2 class="toc">6.4. Linking</h2>
+</a><a href="#morphing">
+<h2 class="toc">6.5. Morphing</h2>
+</a><a href="#borders">
+<h2 class="toc">6.6. Borders</h2>
+</a><a href="#grouping">
+<h2 class="toc">6.7. Grouping (obsolete, replaced by hierachies)</h2>
+</a><a href="#ui">
+<h1 class="toc">7. User Interface</h1>
+</a><a href="#gui">
+<h2 class="toc">7.1. Graphical User Interface</h2>
+</a><a href="#main">
+<h3 class="toc">7.1.1. Main window</h3>
+</a><a href="#inspector">
+<h3 class="toc">7.1.2. Inspector window</h3>
+</a><a href="#console">
+<h3 class="toc">7.1.3. Console window</h3>
+</a><a href="#cmdref">
+<h2 class="toc">7.2. Command reference</h2>
+</a><a href="#menuref">
+<h3 class="toc">7.2.1. Menu command reference</h3>
+</a><a href="#fileMenu">
+<h4 class="toc">7.2.1.1. File Menu</h4>
+</a><a href="#editMenu">
+<h4 class="toc">7.2.1.2. Edit Menu</h4>
+</a><a href="#viewMenu">
+<h4 class="toc">7.2.1.3. View Menu</h4>
+</a><a href="#pluginMenu">
+<h4 class="toc">7.2.1.4. Plugin Menu</h4>
+</a><a href="#debugMenu">
+<h4 class="toc">7.2.1.5. Debug Menu</h4>
+</a><a href="#helpMenu">
+<h4 class="toc">7.2.1.6. Help Menu</h4>
+</a><a href="#mouse">
+<h3 class="toc">7.2.2. Mouse command reference</h3>
+</a><a href="#keyboard">
+<h3 class="toc">7.2.3. Keyboard command reference</h3>
+</a><a href="#plugins">
+<h1 class="toc">8. Plugins</h1>
+</a><a href="#plan">
+<h1 class="toc">9. Future Plans</h1>
+</a><a href="#conclusion">
+<h1 class="toc">10. Conclusion</h1>
+</a>
+<h2>How to Read this Document</h2>
+<p>
+       This document's meta-information (authors, revision history, table of contents, ...) can be found above.
+       What follows below is the body of the document.
+       The body is composed of several sections, which may be further composed of subsections.
+     </p>
+<p>
+       Typographical styles are used to denote entities of different kinds.
+       For a full list of entities and their respective typographic conventions, please refer to the <a href="../../Management/Documentation/DOC-XML_Documentation.xml#xmlContentStyles">Styles section of the XML Documentation</a> document.
+     </p>
+<p>
+       When viewing the document in a non-printed form, it is possible to submit comments regarding a given section to the document's owner.
+       This is achieved by clicking the mail icon next to the section title.
+       For this to work, your mail must be configured to properly handle the <tt>mailto</tt> URLs.
+     </p>
+		<a name="intro" href="#toc">
+<h1>1.  Introduction</h1>
+</a>
+			<p>
+				Visual Database Configuration Tool (VisualDCT) is an EPICS database configuration tool completely written in Java
+				and therefore supported in various systems. It was developed to provide features missing in existing configuration tools
+				as Capfast and Graphical Database Configuration Tool (GDCT). Visually VisualDCT resembles GDCT; records can be created,
+				moved and linked, fields and links can be easily modified. But VisualDCT offers more: using hierarchical design od DBs and groups,
+				records can be grouped together in a logical block. Additionally indication of data flow direction using arrows makes the design
+				easier to understand. VisualDCT has a powerful DB parser, which allows importing existing DB and DBD files.
+				Output file is also DB file, all comments and record order is preserved and visual data saved as comment,
+				which allows DBs to be edited in other tools or manually.<br>
+				This manual describes the VisualDCT version 2.4 build 1244.
+			</p>
+		
+		
+		<a name="basic" href="#toc">
+<h1>2.  Basic principles</h1>
+</a>
+			<p>
+				VisualDCT is designed to create and maintain EPICS record instance database (<tt class="filename">.db</tt>) files.
+				In order for VisualDCT to execute properly, a database definition (<tt class="filename">.dbd</tt>) file has to be provided
+				which contains the specifications for the various record and device types that they intend to
+				reference in any record instance database (<tt class="filename">.db</tt>) file to be created by VisualDCT. Once a database
+				definition (<tt class="filename">.dbd</tt>) file has been specified, records can be created, copied, renamed, etc. using the
+				various facilities provided by the VisualDCT. 
+				As the user interacts with the various VisualDCT windows, selections, and data entry fields,
+				the results of these interactions are displayed on the screen. Revisions and data entry updates
+				of record instance data displayed on the screen do not replace previously stored record instance
+				data until the user saves currently modified record instance database (<tt class="filename">.db</tt>) file.
+				As VisualDCT executes, it attempts to trap and display the most common situations that might lead
+				to diminishing the integrity of the user supplied information.
+			</p>
+		
+
+		<a name="running" href="#toc">
+<h1>3.  Running VisualDCT</h1>
+</a>
+			<p>
+				In order to run VisualDCT, Java Runtime Environment 1.4 is required.
+				VisualDCT is distributed as a Java ARchive package (<tt class="filename">.jar</tt> file),
+				so there is only one file in the binary distribution.
+				This file has to be added to the java <tt class="keyword">classpath</tt> variable
+				(search path for application classes and resources) to help JVM find <tt class="keyword">com.cosylab.vdct.VisualDCT</tt> class,
+				which is the main class of the VisualDCT.<br>
+						
+				Usage of VisualDCT:
+			</p>
+				<pre language="command line" id="cmdln">
+				  java -cp VisualDCT.jar com.cosylab.vdct.VisualDCT [<DBD>* or <DB>*]
+				</pre>
+<p class="description">
+<b>Listing 1:</b> Basic run command.</p>
+				
+			<p>
+				VisualDCT Java ARchive package (<tt class="filename">.jar</tt> file) is so called executable JAR file, which means it can be run as:
+			</p>
+
+				<pre language="command line" id="cmdln">
+				  java -jar VisualDCT.jar [<DBD>* or <DB>*]
+				</pre>
+<p class="description">
+<b>Listing 2:</b> Running executable JAR.</p>
+				
+			<p>
+				or if you GUI has this feature double-click on <tt class="filename">VisualDCT.jar</tt> will also do it.
+
+				VisualDCT accepts two parameters which are not obligatory: database definition files and
+				record instance database files (if this is already specified in DBs, specification of database definition
+				file is not needed). DBD is recognised as a file with <tt class="filename">.dbd</tt> extension otherwise DB is assumed.
+				If there is no DBDs specified an Open dialog will appear allowing you to specify DBD file.
+				If even then there is no valid DBD specified VisualDCT will exit with the following output:
+			</p>
+
+				<pre language="command line" id="cmdln">
+				  o) No DBD loaded! Exiting...
+				</pre>
+<p class="description">
+<b>Listing 3:</b> No DBD loaded error message.</p>
+
+			<p>
+				An example of running VisualDCT, using <tt class="filename">test.dbd</tt> definition database and <tt class="filename">test.db</tt> instance database file:
+			</p>
+				
+				<pre language="command line" id="cmdln">
+				  java -jar VisualDCT.jar -DVDCT_DIR=~/epics test.dbd test.db
+				</pre>
+<p class="description">
+<b>Listing 4:</b> An example of running VisualDCT.</p>
+			<p>
+				<tt class="keyword">VDCT_DIR</tt> environment variable is used to define the default working directory.<br>
+				VisualDCT als supports EPICS_DB_INCLUDE_PATH environment variable, which adds a additional
+				search path for DB files used in the hierarchy so you can store useful modules in a central location.
+			</p>
+				<pre language="command line" id="cmdln">
+				  java -jar VisualDCT.jar -DEPICS_DB_INCLUDE_PATH=$EPICS_DB_INCLUDE_PATH test.dbd test.db
+				</pre>
+<p class="description">
+<b>Listing 5:</b> An example of EPICS_DB_INCLUDE_PATH environment variable usage.</p>
+			<p>
+				For saving configuration data Java Preferences API is used. This means configuration is kept in
+				a system depended configuration storage, e.g. registry when using Windows OS, <tt class="filename">~/.java</tt> (user) and <tt class="filename">/etc/java</tt> (system) on UNIX/Linux systems..
+			</p>
+			<p>
+				VisualDCT searches for plugins configuration in users home directory. If there is none, it looks into the
+				<tt class="keyword">VDCT_CONFIG_DIR</tt> directory, where <tt class="keyword">VDCT_CONFIG_DIR</tt> is an environment variable is used to define the default plugins configuration directory.
+				Default value of <tt class="keyword">VDCT_CONFIG_DIR</tt> is <file>/etc/vdct</file>.
+			</p>
+			<pre language="command line" id="cmdln">
+			  java -jar VisualDCT.jar -DVDCT_CONFIG_DIR=/users/devl/config/vdct test.dbd test.db
+			</pre>
+<p class="description">
+<b>Listing 6:</b> An example of overriding default plugins configuration directory.</p>
+		
+
+		<a name="flatdb" href="#toc">
+<h1>4.  Command Line Tool for Generating Flat Databases</h1>
+</a>
+			<p>
+				You can generate flat databases also from command line, which is useful for generation from scripts or generating large databases.
+				Same as for VisualDCT, Java Runtime Environment 1.4 is required, but the difference is you can use it on a headless terminal.
+				To start the generation you have to add VisualDCT's jar to classpath and invoke a specific class (<tt class="keyword">com.cosylab.vdct.GenerateFlatDatabase</tt>), which takes care of the generation.
+				This command line tool basically takes two parameters: the input <tt class="filename">.vdb</tt> file (probably your main file), which is used together with all the <tt class="filename">.vdb</tt> files included as templates and the output <tt class="filename">.db</tt> file, to which the flat database is generated.
+			</p>
+							
+				<pre language="command line" id="cmdln">
+					java -cp VisualDCT.jar com.cosylab.vdct.GenerateFlatDatabase [OPTION]... input.vdb output.db
+				</pre>
+<p class="description">
+<b>Listing 7:</b> Generating flat databases.</p>
+
+			
+			<p>
+				We also provided a script for running this tool, named <tt class="keyword">flatdb</tt>, which can be found next to the distribution of VisualDCT.	
+			</p>
+			
+				<pre language="command line" id="cmdln">
+					flatdb [OPTION]... input.vdb output.db
+				</pre>
+<p class="description">
+<b>Listing 8:</b> Running with a script.</p>
+
+			<p>
+				Additionaly you can specify command line option <tt class="keyword">-d</tt> or <tt class="keyword">--dbd-file</tt>, followed by the name of a <tt class="filename">.dbd</tt> file.
+				This loads a specific <tt class="filename">.dbd</tt> file before generating a flat database.
+			</p>
+				<pre language="command line" id="cmdln">
+					flatdb --dbd-file app.dbd input.vdb output.db
+				</pre>
+<p class="description">
+<b>Listing 9:</b> Example with a <tt class="filename">.dbd</tt> file.</p>
+			<p>
+				Options <tt class="keyword">--enable-global-macros</tt> and <tt class="keyword">--disable-global-macros</tt> respectively enable and disable global macro evaluation.
+			</p>
+			<p>
+				Options <tt class="keyword">--enable-capfast</tt> and <tt class="keyword">--disable-capfast</tt> enable and disable production of hierarhical names like CapFast.
+			</p>
+			<p>
+				Both of the above command line options when not specified on the command line, use the same settings as were made in VisualDCT's visual user interface (settings are automatically saved).
+			</p>
+		
+
+		<a name="hierarchies" href="#toc">
+<h1>5.  Hierarchy support</h1>
+</a>
+			<p>
+				VisualDCT also supports hierarchical design of EPICS databases. For detailed information about it
+				refer to <a href="#hierarchies">VisualDCT EPICS Databases Hierarchy Support</a> and
+				<a href="#vdct_hierarchy_additions">VisualDCT Hierarchy Additions</a> documents.
+			</p>
+		
+
+		<a name="features" href="#toc">
+<h1>6.  Features</h1>
+</a>
+
+			<a name="rdd" href="#toc">
+<h2>6.1.  Rapid Database Development (RDD)</h2>
+</a>
+				<p>
+					VisualDCT can be considered as a rapid database development tool -
+					unintuitive database construction using ordinary text editors can be done quickly
+					with a few simple mouse-clicks minimizing all unnecessary keyboard input.
+					Visualization of the record instance database makes databases easier to understand,
+					errors are much easier to find (e.g. broken links are indicated by a red cross)
+					and helps find a better design of the databases. Allowing user to user hierarchal design
+					and split databases into logical blocks.
+				</p>
+			
+
+			<a name="parser" href="#toc">
+<h2>6.2.  Database file parser, input/output file</h2>
+</a>
+				<p>
+					VisualDCT creates and maintains only one file, the record instance database (<tt class="filename">.db</tt> or <tt class="filename">.vdb</tt>) file,
+					and does not have any additional graphical information file avoiding any possible consistency
+					problems when having multiple files, all necessary visual composition data is stored as
+					comments at the end of the DB file.
+					An example of DB file:
+				</p>
+			<pre language="EPICS DB" id="db_example">
+			  
+#! Generated by VisualDCT v2.3
+#! DBDSTART
+#! DBD("/home/matej/epics/test1.dbd")
+#! DBDEND
+
+path ":/home/matej"
+addpath "epics:epics/templates"
+include "dummy.db"
+
+# This is an record comment...
+record(calc, error) {
+  field(INPA, "$(slmot1.position)")
+}
+
+record(ao, speed) {
+  field(DTYP, "Soft Channel")
+  field(OUT, "$(slmot1.speed)")
+  field(HIHI, "1208")
+}
+
+# This is an expand comment...
+expand("slideMotor.vdb", slmot1) {
+  macro(name, "sm1")
+  macro(address, "4")
+  macro(demand, "slide1:demand.VAL")
+}
+
+#! Further lines contain data used by VisualDCT
+
+#! TemplateInstance("slmot1",100,340,0,"")
+
+#! Record(error,640,20,0,0,"error")
+#! Field("error.INPA",16777215,0,"error.INPA")
+#! Link("error.INPA","error/INPA")
+#! Connector("error/INPA","$(slmot1.position)",417,117,16777215,"",0)
+#! Record(speed,720,500,0,0,"speed")
+#! Field("speed.OUT",16777215,0,"speed.OUT")
+#! Link("speed.OUT","speed/OUT")
+#! Connector("speed/OUT","$(slmot1.speed)",617,577,16777215,"",0)
+			</pre>
+<p class="description">
+<b>Listing 10:</b> An example of complete DB file.</p>
+			<p>
+				VisualDCT has powerful parser which has ability to parse already existing DBs,
+				files which have been created or modified with other tool. It also detects syntax errors in databases,
+				including DBDs. Defective visual composition data or its absence are safely handled and do not raise
+				any critical error, VisualDCT simply automatically layouts all objects without any visual data.
+				What is more, VisualDCT preserves comments and record/field order in the record instance database,
+				which offers the ability to edit your databases in other tools or manually without making any harm
+				to the databases and VisualDCT.
+			</p>
+
+			
+
+			<a name="representation" href="#toc">
+<h2>6.3.  Visual representation of objects</h2>
+</a>
+				<a name="record" href="#toc">
+<h3>6.3.1.  Record</h3>
+</a>
+					<p class="figure">
+<img src="MAN-VisualDCT_Users_Manual/record.png" onclick="window.open('MAN-VisualDCT_Users_Manual/record.png', '', 'menubar=0,status=0,toolbar=0,width=640,height=480,resizable=1');"><p class="description">
+<b>Figure 1:</b> Record</p>
+</p>
+					<p>
+						Record is represented as a write square with its type and name written inside.
+						Below the line inside the record there is an area where all fields values are shown, selection of fields depends on its <a href="#visibility">visibility property</a>.<br>
+						There are three types of fields that can appear as part of the record (white squares below the record):
+						<tt class="keyword">VARIABLE</tt> (data), <tt class="keyword">INPUT</tt>, <tt class="keyword">OUTPUT</tt> and <tt class="keyword">FORWARD</tt> fields.
+						Variable fields hold a piece of data, such as the <tt class="keyword">VAL</tt> or <tt class="keyword">HIHI</tt> fields.
+						Since the variable fields can be populated by other record's output fields and read by other
+						record's input fields, a field node will appear below the record.
+						Additionally indication of data flow direction using arrows makes fields easy to distinguish:
+						<ul>
+						  <li>
+<span class="bold">circle</span> - <tt class="keyword">VARIABLE</tt> fields (from version 2.5 on, <tt class="keyword">VARIABLE</tt> fields have a circle on both sides)</li>
+						  <li>
+<span class="bold">out-arrow</span> - <tt class="keyword">OUTPUT</tt> and <tt class="keyword">FORWARD</tt> fields</li>
+						  <li>
+<span class="bold">in-arrow</span> - <tt class="keyword">INPUT</tt> fields</li>
+						</ul>
+					</p>
+					<p>
+						A multi-point wire can be drawn between any two linkable fields simply by adding connectors (moveable small squares on a link line).
+						If a link is an inter-group link (link between two fields which are not in the same group), the link is represented as a line going in the screen with the target link name shown by side.
+						Wherever VisualDCT detects there is a possiblity of two wire to merge, it indicates this by drawing a small dot on the wire (at the possible point of merging). 
+					</p>
+				
+
+				<a name="group" href="#toc">
+<h3>6.3.2.  Group</h3>
+</a>
+					<p class="figure">
+<img src="MAN-VisualDCT_Users_Manual/group.png" onclick="window.open('MAN-VisualDCT_Users_Manual/group.png', '', 'menubar=0,status=0,toolbar=0,width=640,height=480,resizable=1');"><p class="description">
+<b>Figure 2:</b> Group</p>
+</p>
+					<p>
+					Group is represented as a white square with its name inside. Double click over it descends into it.
+					</p>
+				
+
+				<a name="templateInstance" href="#toc">
+<h3>6.3.3.  Template Instance</h3>
+</a>
+					<p class="figure">
+<img src="MAN-VisualDCT_Users_Manual/template.png" onclick="window.open('MAN-VisualDCT_Users_Manual/template.png', '', 'menubar=0,status=0,toolbar=0,width=640,height=480,resizable=1');"><p class="description">
+<b>Figure 3:</b> Template Instance</p>
+</p>
+					<p>
+					Template instance is represented as a larger write square. It its body it contains: name (id) at right at the top, template description below, template ports (values to be passed out of the template) and template macors (macro definitions to be passed inside the template).
+					Those template fields can be reordered just by dragging them, but default (and recommended) order implies input fields on the left and output fields on the right side.<br>
+					To change template instance properties double click over it and use <a href="#inspector">Inspector tool</a> or <span class="keystroke">  Shift  </span> + double click to descent into it.
+					</p>
+				
+
+				<a name="links" href="#toc">
+<h3>6.3.4.  Links</h3>
+</a>
+					<p class="figure">
+<img src="MAN-VisualDCT_Users_Manual/links.png" onclick="window.open('MAN-VisualDCT_Users_Manual/links.png', '', 'menubar=0,status=0,toolbar=0,width=640,height=480,resizable=1');"><p class="description">
+<b>Figure 4:</b> Links</p>
+</p>
+					<p>
+					VisualDCT distinguish several link types:
+					<ul>
+					  <li>
+<font color="green"><span class="bold">oridnary</span></font> - normal link. Like for any other link type, link wire can be freely broken using connectors.</li>
+					  <li>
+<font color="yellow"><span class="bold">invisible</span></font> - link with incomplete wire (to make complex databases more cleaner). To create it add connector, left button click over it and choose <span class="menu">  Mode  </span>-<span class="menu">  Invisible  </span>.</li>
+					  <li>
+<span class="bold">inter-group</span> - link between objects which are not in the same group or link to invisible template field.</li>
+					  <li>
+<font color="red"><span class="bold">external input</span></font> - link which target is an external object (invalid link for VisualDCT). To create it enter target, add connector to field, left button click over connectgor and choose <span class="menu">  Mode  </span>-<span class="menu">  External INPUT  </span>.</li>
+					  <li>
+<font color="blue"><span class="bold">external output</span></font> - link which target is an external object (invalid link for VisualDCT). To create it enter target, add connector, left button click over connector and choose <span class="menu">  Mode  </span>-<span class="menu">  External OUPUT  </span>.</li>
+					  <li>
+<font color="magenta"><span class="bold">invalid</span></font> - link for which VisualDCT did not found its target.</li>
+					</ul>
+					</p>
+				
+				
+				<a name="other" href="#toc">
+<h3>6.3.5.  Other Graphical Objects</h3>
+</a>
+					<p class="figure">
+<img src="MAN-VisualDCT_Users_Manual/graphical.png" onclick="window.open('MAN-VisualDCT_Users_Manual/graphical.png', '', 'menubar=0,status=0,toolbar=0,width=640,height=480,resizable=1');"><p class="description">
+<b>Figure 5:</b> Line/arrow, box and textbox (plain and HTML)</p>
+</p>
+					<p>
+					</p>
+				
+
+			
+
+			<a name="linking" href="#toc">
+<h2>6.4.  Linking</h2>
+</a>
+				<p>
+					There are two ways of linking:
+					<ul>
+					  <li>value of the <tt class="keyword">INPUT</tt>, <tt class="keyword">OUTPUT</tt> or <tt class="keyword">FORWARD</tt> link field is entered using <a href="#inspector">Inspector tool</a>
+</li>
+					  <li>using linking capability of VisualDCT using only mouse:
+						  <ol>
+						    <li>Right click on the parent record of the <tt class="keyword">INPUT</tt>, <tt class="keyword">OUTPUT</tt> or <tt class="keyword">FORWARD</tt> link field</li>
+						    <li>Pop-up menu will appear, choose the appropriate link field</li>
+						    <li>A crosshair cursor will appear and the parent record will blink until the <tt class="keyword">VARIABLE</tt> field or record if <tt class="keyword">FORWARD</tt> link is determined; to do this, there are tree options:
+							    <ul>
+							      <li>left click on the record - <tt class="keyword">VAR</tt> field is used, or record if <tt class="keyword">FORWARD</tt> link</li>
+							      <li>left click on the field - link to clicked filed is created</li>
+							      <li>right click on the record - pop-up menu will appear allowing you to select the <tt class="keyword">VARIABLE</tt> field</li>
+							    </ul>
+								After linking is completed cursor is changed back to normal.
+						    </li>
+						  </ol>
+					  </li>
+					</ul>
+				</p>
+				<p class="comment">
+      [<a href="javascript:mailTo(%22j.sekoranja@cosylab.com%22,%22mate%22);">Matej Sekoranja</a>]
+      VisualDCT uses the following rule: linking destintation is the object which value contains target name, e.g. ao001.INP (source) field contains "ao002.VAL" value (target).</p>
+			
+
+			<a name="morphing" href="#toc">
+<h2>6.5.  Morphing</h2>
+</a>
+				<p>
+					VisualDCT has a capability to morph (change) record and template types, i.e. to change type and preserving all common fields. 
+					Command is accessible via <span class="menu">  Edit  </span>-<span class="menu">  Morph  </span> menu or pop-up (context) menu.
+				</p>
+			
+
+			<a name="borders" href="#toc">
+<h2>6.6.  Borders</h2>
+</a>
+				<p>
+					VisualDCT supports custom defined borders (just like the borders around mechanical and
+					electrical engineering drawings) which have author, id, name and change
+					blocks. They consist of lines, rectangles and text blocks, but no
+					records. Once merged, the block remains as a single block with text editable.<br>
+					Borders are defined as a ordinary DB file using box, textbox and line objects. 
+					Once this DB file is imported into other DB using <span class="menu">  File  </span>-<span class="menu">  Import border...  </span> all
+					graphics objects are imported as single block with textbox editable.
+				</p>
+			
+
+			<a name="grouping" href="#toc">
+<h2>6.7.  Grouping (obsolete, replaced by hierachies)</h2>
+</a>
+				<p>
+					Grouping is based on the naming,
+					for instance record with name <tt class="identifier">grp1:ao001</tt> belongs to group <tt class="identifier">grp1</tt> and record <tt class="identifier">grp1:grp2:ao002</tt>
+					belongs to group <tt class="identifier">grp2</tt> which belongs to <tt class="identifier">grp1</tt>, so groups can be also nested.
+					In previous examples <tt class="keyword">:</tt> character was used as a grouping separator, which is the default,
+					but it can be easily changed in Settings window (<span class="menu">  View  </span>-<span class="menu">  Settings...  </span>).<br>
+					Double click on the group descends into the group and shows only the records and groups in this group, use <span class="menu">  View  </span>-<span class="menu">  Level Up  </span> (<span class="keystroke">  Shift  </span>+<span class="keystroke">  Up  </span>) to ascend from the group.<br>
+					Grouping can be easily achieved on the naming basis, simply by renaming records, or using in the <span class="menu">  Group  </span> or <span class="menu">  Ungroup  </span> commands from the <span class="menu">  Edit  </span> menu on the object selection.
+				</p>
+			
+
+		
+
+
+		<a name="ui" href="#toc">
+<h1>7.  User Interface</h1>
+</a>
+			<p>
+				As every powerful IDE also VisualDCT provides indispensable facilities as clipboard and undo support.
+				A great effort was given to synchronization between the record instance database and its visualization.
+				Every change done visually is immediately reflected in the database and vice versa;
+				all actions like moving, renaming and deletion of records which affect links are automatically fixed
+				by the VisualDCT.
+			</p>
+
+			<a name="gui" href="#toc">
+<h2>7.1.  Graphical User Interface</h2>
+</a>
+				<p>
+					Graphical User Interface of the VisualDCT consists of 3 main windows:
+					<ol>
+					  <li>
+<a href="#main">Main window</a>
+</li>
+					  <li>
+<a href="#inspector">Inspector window</a>
+</li>
+					  <li>
+<a href="#console">Console window</a>
+</li>
+					</ol>
+				</p>
+
+				<a name="main" href="#toc">
+<h3>7.1.1.  Main window</h3>
+</a>
+					<p class="figure">
+<img src="MAN-VisualDCT_Users_Manual/main.png" onclick="window.open('MAN-VisualDCT_Users_Manual/main.png', '', 'menubar=0,status=0,toolbar=0,width=640,height=480,resizable=1');"><p class="description">
+<b>Figure 6:</b> Main window</p>
+</p>
+					<p>
+						The main window consists of:
+						<ol>
+						  <li>
+<span class="bold">Main menu</span>
+</li>
+						  <li>
+<span class="bold">Toolbar</span> - makes access to the frequently used actions easier.</li>
+						  <li>
+<span class="bold">Workspace with Navigator</span> - it is the main component of the VisualDCT, it provides visualization and the capability of editing the record instance database. Navigator is a miniature view of the whole workspace. Using mouse over the navigator you can easily move through the workspace.</li>
+						  <li>
+<span class="bold">Status bar with Zoom scale slider</span> - shows the name of the active definition database and the name of the current group. Zoom scale slider is used to easily change zoom scale. On small scales (less than 100%) special (<span class="keystroke">  Shift  </span> + move) zoom can be used to blow up the objects.</li>
+						</ol>
+					</p>
+				
+
+				<a name="inspector" href="#toc">
+<h3>7.1.2.  Inspector window</h3>
+</a>
+					<p class="figure">
+<img src="MAN-VisualDCT_Users_Manual/inspector.png" onclick="window.open('MAN-VisualDCT_Users_Manual/inspector.png', '', 'menubar=0,status=0,toolbar=0,width=640,height=480,resizable=1');"><p class="description">
+<b>Figure 7:</b> Inspector window</p>
+</p>
+					<p>
+						The inspector tool provides a capability of inspecting (examining) and modifying of all objects properties.
+						Basically the inspector tool is already all needed to edit record instance databases - it replaces ordinary text editor.<br>
+						
+						The inspector window consists of:
+						<ol>
+						  <li>
+<span class="bold">Object combobox</span> - shows currently inspected object and allows user to choose another object in the current database.</li>
+						  <li>
+<span class="bold">Property table</span> - name-value pair table allowing user to inspect or modify fields. Record fields are grouped according <tt class="keyword">promptgroup</tt> field defined in definition database.</li>
+						  <li>
+<span class="bold">Comment textarea</span> - shows record comment and allows user to modify it.</li>
+						  <li>
+<span class="bold">Status bar</span> - provides basic help, the value of the <tt class="keyword">prompt</tt> field defined in definition database is shown for fields and so helping uses to understand the meaning of the fields (e.g. LBRK - "Last break point").</li>
+						  <li>
+<span class="bold">Center button</span> - centers the screen ont the inspected object</li>
+						</ol>
+						
+						Inspected object is marked as highlighted on the screen.
+					</p>
+					
+					<a name="visibility"></a>
+					<p>
+						Each field has additional property called <tt class="identifier">visibility</tt>, whether the field value is shown inside the record body (see <a href="#record">Record representation</a>). It can be changed by clicking right mouse button over left column. Tree icons indicate the visibility state of the field:
+						<ul>
+						  <li>
+<img src="MAN-VisualDCT_Users_Manual/blank.gif"> - field value is shown if value differs from default.</li>
+						  <li>
+<img src="MAN-VisualDCT_Users_Manual/eye.gif"> - field value is always shown.</li>
+						  <li>
+<img src="MAN-VisualDCT_Users_Manual/noeye.gif"> - field value is never shown.</li>
+						</ul>
+					</p>
+					<p>
+						A macro definition can be entered for any field, including menus and links.
+						Any changes to fields take place immediately in the visual composition.
+					</p>
+				
+
+				<a name="console" href="#toc">
+<h3>7.1.3.  Console window</h3>
+</a>
+					<p class="figure">
+<img src="MAN-VisualDCT_Users_Manual/console.png" onclick="window.open('MAN-VisualDCT_Users_Manual/console.png', '', 'menubar=0,status=0,toolbar=0,width=640,height=480,resizable=1');"><p class="description">
+<b>Figure 8:</b> Console window</p>
+</p>
+					<p>
+						Console window is used to replace standard output of the JVM, which is often ignored by the user.
+						All output is redirected to the console	which pops up every time a new message appears in it and so informs user about the new message.
+					</p>
+				
+
+			
+
+			<a name="cmdref" href="#toc">
+<h2>7.2.  Command reference</h2>
+</a>
+				<p>
+				This section describes all commands available by the VisualDCT.
+				</p>
+
+				<a name="menuref" href="#toc">
+<h3>7.2.1.  Menu command reference</h3>
+</a>
+					<p>
+					This section describes menu commands available by the VisualDCT.
+					</p>
+					
+					<a name="fileMenu" href="#toc">
+<h4>7.2.1.1.  File Menu</h4>
+</a>
+						<ul>
+						  <li>
+<span class="bold">New</span> - close the currently active database, and allow the user to create a new database.</li>
+						  <li>
+<span class="bold">Open</span> - close the currently active database, and provide a file selection window which will allow the user to open a new existing database. The record instance database will be checked for consistency with loaded DBDs.</li>
+						  <li>
+<span class="bold">Import DB</span> - provide a file selection window which will allow the user to specify a new existing database which will be added (appended) to the existing active database (only loaded into template registry if contains <tt class="keyword">templates</tt>).</li>
+						  <li>
+<span class="bold">Manage DBDs</span> - pop-up a DBD Manager dialog allowing to remove/load other DBDs.</li>
+						  <li>
+<span class="bold">Save</span> - save the currently active database.</li>
+						  <li>
+<span class="bold">Save As</span> - save the currently active database, and allow the user to specify a name of the file into which the database will be saved.</li>
+						  <li>
+<span class="bold">Save As Group</span> - save the currently active group of database as an standalone database, and allow the user to specify a name of the file into which the database will be saved.</li>
+						  <li>
+<span class="bold">Generate</span> - save the currently active database as a <a href="DES-VisualDCT_EPICS_Databases_Hierarchy_Support.html#flattening" target="_blank">flat database</a>. </li>
+						  <li>
+<span class="bold">Generate As Group</span> - save the currently active group of database as a flat standalone database.</li>
+						  <li>
+<span class="bold">Export</span> - menu containing all export plugins.</li>
+						  <li>
+<span class="bold">Export as PostScript</span> - exports current view to the PostScript (<tt class="filename">.ps</tt>) file.</li>
+						  <li>
+<span class="bold">Print</span> - print the current visible area of the database.</li>
+						  <li>
+<span class="bold">Print as PostScript</span> - print the current visible area of database as PostScript.</li>
+						  <li>
+<span class="bold">Print Preview</span> - display a view of the active database as it will be printed.</li>
+						  <li>
+<span class="bold">Exit</span> - exit the VisualDCT.</li>
+						  <li>
+<span class="bold">Recent files...</span> - list of recently used files (choosing a file opens it).</li>
+						  <li>
+<span class="bold">Exit</span> - exit the VisualDCT.</li>
+						</ul>
+					
+					
+					<a name="editMenu" href="#toc">
+<h4>7.2.1.2.  Edit Menu</h4>
+</a>
+						<ul>
+						  <li>
+<span class="bold">Undo</span> - undo the last action.</li> 
+						  <li>
+<span class="bold">Redo</span> - redo the previously undone action.</li>
+						  <li>
+<span class="bold">Cut</span> - cut the selection and put it on the clipboard.</li>
+						  <li>
+<span class="bold">Copy</span> - copy the selection and put it on the clipboard.</li>
+						  <li>
+<span class="bold">Paste</span> - insert the clipboard contents to the workspace.</li>
+						  <li>
+<span class="bold">Move/Rename</span> - move/rename the selection.</li>
+						  <li>
+<span class="bold">Group</span> - group the selection.</li>
+						  <li>
+<span class="bold">Ungroup</span> - ungroup the selection of groups.</li>
+						  <li>
+<span class="bold">Delete</span> - delete the selection.</li>
+						  <li>
+<span class="bold">Select All</span> - select all objects in the current group.</li>
+						</ul>
+					
+
+					<a name="viewMenu" href="#toc">
+<h4>7.2.1.3.  View Menu</h4>
+</a>
+						<ul>
+						  <li>
+<font color="lightgrey"><span class="bold">Flat View</span> - not implemented.</font>
+</li>
+						  <li>
+<span class="bold">Level up</span> - move to the parent group.</li>
+						  <li>
+<span class="bold">Zoom In</span> - increase zoom scale by 10%.</li>
+						  <li>
+<span class="bold">Zoom Out</span> - decrease zoom scale by 10%.</li>
+						  <li>
+<span class="bold">Zoom Selection</span> - zoom the selection to fit the screen.</li>
+						  <li>
+<span class="bold">Base view</span> - move to the centere of the workspace and set zoom scale to 100%.</li>
+						  <li>
+<span class="bold">Toolbar</span> - toggle toolbar visibility.</li>
+						  <li>
+<span class="bold">Statusbar</span> - toggle statusbar visibility.</li>
+						  <li>
+<span class="bold">Navigator</span> - toggle navigator visibility.</li>
+						  <li>
+<span class="bold">Show Grid</span> - toggle grid visibility on the workspace.</li>
+						  <li>
+<span class="bold">Snap to Grid</span> - snap objects to the grid.</li>
+						  <li>
+<span class="bold">Settings</span> - pop-up the settings dialog.</li>
+						</ul>
+					
+
+					<a name="pluginMenu" href="#toc">
+<h4>7.2.1.4.  Plugin Menu</h4>
+</a>
+						<ul>
+						  <li>
+<span class="bold">Plugin Manager</span> - pop-up the plugin manager dialog.</li> 
+						  <li>
+<tt class="identifier">list of installed plugins...</tt>
+</li>
+						</ul>
+					
+
+					<a name="debugMenu" href="#toc">
+<h4>7.2.1.5.  Debug Menu</h4>
+</a>
+						<ul>
+						  <li>
+<span class="bold">Start</span> - start debug plugin.</li> 
+							<ul>
+							  <li>list of installed debug plugins...</li>
+							</ul>
+						  <li>
+<span class="bold">Stop</span> - stop the running debug plugin.</li> 
+						</ul>
+					
+
+					<a name="helpMenu" href="#toc">
+<h4>7.2.1.6.  Help Menu</h4>
+</a>
+						<ul>
+						  <li>
+<span class="bold">Help Topics</span> - list help topics (temporarily only mouse commands are shown).</li>
+						  <li>
+<font color="lightgrey"><span class="bold">Books Online</span> - not implemented</font>
+</li>
+						  <li>
+<span class="bold">About Box</span> - display program information, version number and copyright.</li>
+						</ul>
+					
+					
+				
+
+				<a name="mouse" href="#toc">
+<h3>7.2.2.  Mouse command reference</h3>
+</a>
+					<p class="table">
+<a name="#mouseReference"></a>
+<table id="mouseReference">
+					  <tr>
+<th>Button</th><th>Trigger</th><th>Actor</th><th>Action</th>
+</tr>
+					  <tr>
+<td rowspan="10" align="center">left</td><td align="center">click</td><td>record, group, template</td><td>Select object</td>
+</tr>
+					  <tr>			       <td rowspan="4" align="center">double-click</td><td>group</td><td>Descend into group</td>
+</tr>
+					  <tr>							      <td>field, record, template</td><td>Inspect object</td>
+</tr>
+					  <tr>							      <td>connector</td><td>Find target</td>
+</tr>
+					  <tr>							      <td>blank workspace</td><td>Create new record</td>
+</tr>
+					  <tr>			       <td align="center"><span class="keystroke">  Shift  </span> + double-click</td><td>template</td><td>Descend into template</td>
+</tr>
+					  <tr>			       <td rowspan="2" align="center">click, drag</td><td>record, group, template / selection</td><td>Move object / selection</td>
+</tr>
+					  <tr>							       <td>navigator</td><td rowspan="2">Move through the workspace</td>
+</tr>
+					  <tr>			       <td align="center"><span class="keystroke">  Shift  </span> + drag</td><td>blank workspace</td>
+</tr>
+					  <tr>			       <td align="center">drag</td><td>blank workspace</td><td>Select record, groups, templates</td>
+</tr>
+					  <tr>
+<td rowspan="4" align="center">right</td><td rowspan="2" align="center">click</td><td>object, blank workspace</td><td>Popup object specific menu</td>
+</tr>
+					  <tr>											<td>left navigator column of a field</td><td>Change field visibility</td>
+</tr>
+					  <tr>			       <td align="center"><span class="keystroke">  Shift  </span> + click</td><td>field with more than one link or template field</td><td>Rotate link</td>
+</tr>
+					  <tr>			       <td align="center">drag</td><td>blank workspace</td><td>Zoom in selection</td>
+</tr>
+					  <tr>
+<td rowspan="1" align="center"> </td><td align="center"><span class="keystroke">  Shift  </span> + move + Zoom < 100%</td><td>any visible object</td><td>Blow up the object to 100%</td>
+</tr>
+					  
+					</table>
+</p>
+<p class="description">
+<b>Table 1:</b> Mouse command reference</p>
+				
+
+				<a name="keyboard" href="#toc">
+<h3>7.2.3.  Keyboard command reference</h3>
+</a>
+					<p>
+						Among all visually documented (on the left side of menu items) combinations there is one additional combination: <br>
+						<ul>
+							<span class="keystroke">  Ctrl  </span> + <span class="keystroke">  arrow key  </span> to navigate through workspace.
+						</ul>
+					</p>
+				
+
+			
+		
+
+
+		<a name="plugins" href="#toc">
+<h1>8.  Plugins</h1>
+</a>
+			<p class="figure">
+<img src="MAN-VisualDCT_Users_Manual/plugin.png" onclick="window.open('MAN-VisualDCT_Users_Manual/plugin.png', '', 'menubar=0,status=0,toolbar=0,width=640,height=480,resizable=1');"><p class="description">
+<b>Figure 9:</b> Plugin Manager window</p>
+</p>
+			<p>
+				To make VisualDCT more flexsible support for plugins was implemented. 
+				For detailed information about plugins refer to <a href="#plugins">VisualDCT Plugins</a> document.
+			</p>
+		
+
+		<a name="plan" href="#toc">
+<h1>9.  Future Plans</h1>
+</a>
+			<p>
+				Since VisualDCT is an active project, there are some features to be implemented in the future releases of VisualDCT
+				and all bug reports, suggestions and ideas are very appriciated.
+			</p>
+		
+
+		<a name="conclusion" href="#toc">
+<h1>10.  Conclusion</h1>
+</a>
+			<p>
+				If this manual did not meet all of your expectations or if you have any questions or suggestions,
+				please feel free to contact the author. <br>
+				Enjoy using VisualDCT.
+			</p>
+		
+	<br>
+<br>
+<p align="center">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" background="../../Common/Documentation/images/Cosyline.png">
+<tr height="25px">
+<td valign="top" align="right" style="padding:0;spacing:0;border:solid white 0px;"><img src="../../Common/Documentation/images/Cosylab.png" border="0"></td>
+</tr>
+</table>
+</p>
+</body>
+</html>

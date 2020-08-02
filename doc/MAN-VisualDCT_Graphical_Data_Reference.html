@@ -1,0 +1,674 @@
+<html xmlns:d="urn:schemas-cosylab-com:Document">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>VisualDCT Graphical Data Reference</title>
+<style>.title 
+{
+  color: #CE2B25; 
+  font-size: 200%;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+  color: #003c8c;
+  text-align: left; 
+  margin-top: 2em; 
+  margin-bottom: 1em; 
+  font-family: Verdana, Arial, Helvetica; 
+}
+
+h2 
+{ 
+  color: #CE2B25; 
+}
+
+h1.toc, h2.toc, h3.toc, h4.toc, h5.toc, h6.toc
+{
+  color: #003c8c;
+  font-size: small;
+  text-align: left;
+  margin-right: 0%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+h1.toc
+{
+  margin-left: 3%;
+  font-weight: bold;
+}
+
+h2.toc
+{
+  margin-left: 6%;
+}
+
+h3.toc
+{
+  margin-left: 9%;
+}
+
+h4.toc
+{
+  margin-left: 12%;
+}
+
+h5.toc
+{
+  margin-left: 15%;
+}
+
+h6.toc
+{
+  margin-left: 18%;
+}
+
+body 
+{
+  margin-left: 5%; 
+  margin-right: 5%;
+}
+
+p
+{
+  font-family: Verdana, Arial, Helvetica;
+}
+
+p.table
+{
+  text-align: left;
+  margin-bottom: 0cm;
+}
+
+p.figure
+{ 
+  text-align: center
+}
+
+p
+{
+  text-align: justify;
+}
+
+p.comment
+{
+  color: red;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+p.warning
+{
+  background-color: #E0E0E0;
+}
+
+p.warning table tr td
+{
+  border-width: 0.02cm; 
+  border-color: red;
+}
+
+p.notice
+{
+  background-color: #F0F0F0;
+}
+
+p.notice table tr td
+{
+  border-width: 0.02cm; 
+  border-color: black;
+}
+
+ol, ul
+{
+  font-family: verdana,sans-serif;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 0%;
+}
+
+pre
+{
+  background: #F0F0F0;
+}
+
+table
+{
+  width: 100%;
+  margin-bottom: 0cm;
+}
+
+th
+{ 
+  padding: 0.1cm;
+  background: #CACAD4; 
+  text-align: center; 
+  border-style: solid; 
+  border-width: 0.02cm;
+}
+
+th.header
+{
+  background: #D0D0D0;
+}
+
+td
+{
+  padding: 0.1cm;
+  border-style: solid;
+  border-width: 0.02cm;
+}
+
+table.equation tr td
+{
+  border-width: 0;
+}
+
+tr.reviewAccepted 
+{
+  background: #D0FFD0;
+}
+
+tr.reviewRejected
+{
+  background: #FFD0D0;
+}
+
+tr.retirement
+{
+  background: black;
+  color: white
+}
+
+span.menu
+{
+  color: white;
+  background: #787996;
+  font-family: tahoma;
+  font-size: 80%;
+}
+
+span.gui
+{
+  border-left-width: 0.025cm;
+  border-top-width: 0.025cm;
+  border-right-width: 0.04cm;
+  border-bottom-width: 0.04cm;
+  border-style: solid;
+  font-family: tahoma;
+  font-size: 80%
+}
+
+span.keystroke
+{            
+  border-style: groove;
+  border-color: #E0E0E0;
+  font-family: tahoma;
+  font-size: 70%;
+}
+
+span.emphasis
+{
+  font-style: italic;
+}
+
+span.bold
+{
+  font-weight: bold;
+}
+
+tt.filename
+{
+  font-family: tahoma;
+}
+
+tt.keyword
+{
+  font-weight: bold;
+}
+
+tt.command
+{
+  font-family: tahoma; 
+  font-weight: bold;
+}
+
+p.description 
+{
+  text-align: center;
+  margin-top: 0cm;
+}
+</style>
+</head>
+<script language="JavaScript"><!--
+        function mailTo(part2, part1) {
+          window.location.href = "mailto:" + part1 + part2;
+        }
+
+        function fullMailTo(part2, part1, subject, body) {
+          var i;
+          var body2 = "";
+
+          for(i = 0; i < body.length; ++i)
+          {
+            if(body.charAt(i) == '\n')
+            {
+              body2 += "%0d%0a";
+            }
+            else
+            {
+              body2 += body.charAt(i);
+            }
+          }
+          
+          window.location.href = "mailto:" + part1 + part2 + "?subject=" + subject + "&body=" + body2;
+        }
+      --></script>
+<body>
+<p class="table">
+<table>
+<tr>
+<th colspan="2" class="title">VisualDCT Graphical Data Reference</th>
+</tr>
+<tr>
+<th class="projectInfo">Project:</th><td>VisualDCT&nbsp;</td>
+</tr>
+<tr>
+<th class="projectInfo">Classification:</th><td>User's Manual</td>
+</tr>
+<tr>
+<th class="projectInfo">Identification:</th><td><tt>CSL-MAN-02-xxxxxx</tt></td>
+</tr>
+<tr>
+<th colspan="2">Copyright © 2002 by Cosylab Ltd. All Rights Reserved.</th>
+</tr>
+</table>
+</p>
+<h2>Document History</h2>
+<p class="table">
+<table>
+<tr>
+<th>Revision</th><th>Date</th><th>Author</th><th>Section</th><th>Modification</th>
+</tr>
+<tr>
+<td rowspan="2">0.9</td><td rowspan="2">2002-10-19</td><td rowspan="2"><a href="javascript:mailTo(%22j.sekoranja@cosylab.com%22,%22mate%22);">Matej Sekoranja</a></td>
+</tr>
+<tr>
+<td>all</td><td>Created.</td>
+</tr>
+<tr>
+<td rowspan="2">1.0</td><td rowspan="2">2003-07-18</td><td rowspan="2"><a href="javascript:mailTo(%22j.sekoranja@cosylab.com%22,%22mate%22);">Matej Sekoranja</a></td>
+</tr>
+<tr>
+<td>all</td><td>Added hierarchy related data.</td>
+</tr>
+</table>
+</p>
+<h2>Scope</h2>
+<p>
+<scope xmlns="urn:schemas-cosylab-com:Document">
+			This document specifies how VisualDCT stores its visual data about graphics layout.
+		</scope>
+</p>
+<h2>Confidentiality</h2>
+<p>
+          This document is classified as a <b>public document</b>.
+          Redistribution and use, with or without modification, are permitted provided that:
+          <ol>
+<li>the copyright notice is retained</li>
+<li>a reference to the original document is made in case of modifications</li>
+<li>this document may not be distributed for profit except as explicitly permitted by valid licenses.</li>
+</ol>
+</p>
+<h2>
+<a name="Audience">Audience</a>
+</h2>
+<p>
+<audience>
+			The audience of this document are all developers of EPICS tools wishing to create visual VisualDCT EPICS databases.
+		</audience>
+</p>
+<h2>References</h2>
+<p class="table">
+<table>
+<tr>
+<th>ID</th><th>Author</th><th>Reference</th><th>Revision</th><th>Date</th><th>Publisher</th>
+</tr>
+<tr>
+<td><a name="visualdct">1</a></td><td>Matej Sekoranja</td><td><a target="_blank" href="http://visualdct.cosylab.com/">VisualDCT Project</a></td><td> </td><td>2002</td><td>Cosylab, Ltd.</td>
+</tr>
+<tr>
+<td><a name="visualdct_latest">2</a></td><td>Matej Sekoranja</td><td><a target="_blank" href="http://visualdct.cosylab.com/builds/VisualDCT/">VisualDCT latest build</a></td><td>2.3.1237</td><td>2002</td><td>Cosylab, Ltd.</td>
+</tr>
+</table>
+</p>
+<h2>
+<a name="toc">Table of Contents</a>
+</h2>
+<a href="#intro">
+<h1 class="toc">1. Introduction</h1>
+</a><a href="#reference">
+<h1 class="toc">2. Reference</h1>
+</a><a href="#datatypes">
+<h2 class="toc">2.1. Data Types</h2>
+</a><a href="#epicsObjects">
+<h2 class="toc">2.2. EPICS Objects</h2>
+</a><a href="#record">
+<h3 class="toc">2.2.1. Record</h3>
+</a><a href="#group">
+<h3 class="toc">2.2.2. Group</h3>
+</a><a href="#field">
+<h3 class="toc">2.2.3. Field</h3>
+</a><a href="#visibility">
+<h3 class="toc">2.2.4. Visibility</h3>
+</a><a href="#link">
+<h3 class="toc">2.2.5. Link</h3>
+</a><a href="#connector">
+<h3 class="toc">2.2.6. Connector</h3>
+</a><a href="#template">
+<h3 class="toc">2.2.7. Template</h3>
+</a><a href="#templateField">
+<h3 class="toc">2.2.8. Template Field</h3>
+</a><a href="#ports">
+<h3 class="toc">2.2.9. Ports</h3>
+</a><a href="#macros">
+<h3 class="toc">2.2.10. Macros</h3>
+</a><a href="#graphicalObjects">
+<h2 class="toc">2.3. Graphical Objects</h2>
+</a><a href="#line">
+<h3 class="toc">2.3.1. Line/Arrow</h3>
+</a><a href="#box">
+<h3 class="toc">2.3.2. Box</h3>
+</a><a href="#textBox">
+<h3 class="toc">2.3.3. TextBox</h3>
+</a><a href="#dbd">
+<h2 class="toc">2.4. DBD Info Block</h2>
+</a><a href="#dbd">
+<h3 class="toc">2.4.1. DBD Info Block</h3>
+</a><a href="#misc">
+<h2 class="toc">2.5. Miscellaneous</h2>
+</a><a href="#skip">
+<h3 class="toc">2.5.1. Skip</h3>
+</a><a href="#view">
+<h3 class="toc">2.5.2. View</h3>
+</a><a href="#conclusion">
+<h1 class="toc">3. Conclusion</h1>
+</a>
+<h2>How to Read this Document</h2>
+<p>
+       This document's meta-information (authors, revision history, table of contents, ...) can be found above.
+       What follows below is the body of the document.
+       The body is composed of several sections, which may be further composed of subsections.
+     </p>
+<p>
+       Typographical styles are used to denote entities of different kinds.
+       For a full list of entities and their respective typographic conventions, please refer to the <a href="../../Management/Documentation/DOC-XML_Documentation.xml#xmlContentStyles">Styles section of the XML Documentation</a> document.
+     </p>
+<p>
+       When viewing the document in a non-printed form, it is possible to submit comments regarding a given section to the document's owner.
+       This is achieved by clicking the mail icon next to the section title.
+       For this to work, your mail must be configured to properly handle the <tt>mailto</tt> URLs.
+     </p>
+		<a name="intro" href="#toc">
+<h1>1.  Introduction</h1>
+</a>
+			<p>
+			VisualDCT creates and maintains only one file, the record instance database (<tt class="filename">.db</tt> or <tt class="filename">.vdb</tt>) file,
+			and does not have any additional graphical information file avoiding any possible consistency problems
+			when having multiple files, all necessary visual composition data is stored as comments at the end
+			of the DB file.<br>
+			All visual VisualDCT data begin with <tt class="identifier">#!</tt> prefix.
+			</p>
+		
+
+		<a name="reference" href="#toc">
+<h1>2.  Reference</h1>
+</a>
+		
+		   <a name="datatypes" href="#toc">
+<h2>2.1.  Data Types</h2>
+</a>
+			   <ul>
+			     <li>
+<span class="emphasis"><span class="bold">color</span></span> - RGB value representing the color (bits 24-31 are alpha, 16-23 are red, 8-15 are green, 0-7 are blue).</li>
+			     <li>
+<span class="emphasis"><span class="bold">boolean types</span></span> - false if 0, true otherwise.</li>
+			   </ul>
+		   
+		   
+		   <a name="epicsObjects" href="#toc">
+<h2>2.2.  EPICS Objects</h2>
+</a>
+		   
+			<a name="record" href="#toc">
+<h3>2.2.1.  Record</h3>
+</a>
+				<pre language="VisualDCT" id="recordRef">
+				  
+			#! Record("recordname", xpos, ypos, color, rotated, "description")
+				</pre>
+<p class="description">
+<b>Listing 1:</b> Record visual data</p>
+			
+
+			<a name="group" href="#toc">
+<h3>2.2.2.  Group</h3>
+</a>
+				<pre language="VisualDCT" id="groupRef">
+				  
+			#! Group("groupname", xpos, ypos, color, "description")
+				</pre>
+<p class="description">
+<b>Listing 2:</b> Group visual data</p>
+			
+
+			<a name="field" href="#toc">
+<h3>2.2.3.  Field</h3>
+</a>
+				<pre language="VisualDCT" id="fieldRef">
+				  
+			#! Field("fieldname", color, rotated, "description")
+				</pre>
+<p class="description">
+<b>Listing 3:</b> Field visual data</p>
+			
+
+			<a name="visibility" href="#toc">
+<h3>2.2.4.  Visibility</h3>
+</a>
+				<pre language="VisualDCT" id="visibilityRef">
+				  
+			#! Visibility("fieldname", visibility)
+			
+			visibility:
+				0 - NON_DEFAULT_VISIBLE
+				1 - ALWAYS_VISIBLE
+				2 - NEVER_VISIBLE</pre>
+<p class="description">
+<b>Listing 4:</b> Visibility visual data</p>
+			
+
+			<a name="link" href="#toc">
+<h3>2.2.5.  Link</h3>
+</a>
+				<pre language="VisualDCT" id="linkRef">
+				  
+			#! Link("fieldname", inLinkID)
+				</pre>
+<p class="description">
+<b>Listing 5:</b> Link visual data</p>
+			
+
+			<a name="connector" href="#toc">
+<h3>2.2.6.  Connector</h3>
+</a>
+				<pre language="VisualDCT" id="connectorRef">
+				  
+			#! Connector("inLinkID", outLinkID, xpos, ypos, color, "description")
+				</pre>
+<p class="description">
+<b>Listing 6:</b> Connector visual data</p>
+			
+
+			<a name="template" href="#toc">
+<h3>2.2.7.  Template</h3>
+</a>
+				<pre language="VisualDCT" id="templateRef">
+				  
+			#! TemplateInstance("id", x, y, color, "desc")
+				</pre>
+<p class="description">
+<b>Listing 7:</b> Template visual data</p>
+			
+
+			<a name="templateField" href="#toc">
+<h3>2.2.8.  Template Field</h3>
+</a>
+				<pre language="VisualDCT" id="templateFieldRef">
+				  
+			#! TemplateField("template instance id", "fieldName", color, isRight, visibility)
+				</pre>
+<p class="description">
+<b>Listing 8:</b> Template field visual data</p>
+			
+
+			<a name="ports" href="#toc">
+<h3>2.2.9.  Ports</h3>
+</a>
+				<pre language="VisualDCT" id="portsRef">
+				  
+			#! ConstantPort(portname, inLinkID, xpos, ypos, color, defaultVisibility)
+			#! InputPort(portname, inLinkID, xpos, ypos, color, defaultVisibility)
+			#! OutputPort(portname, inLinkID, xpos, ypos, color, defaultVisibility)
+				</pre>
+<p class="description">
+<b>Listing 9:</b> Ports field visual data</p>
+			
+
+			<a name="macros" href="#toc">
+<h3>2.2.10.  Macros</h3>
+</a>
+				<pre language="VisualDCT" id="macrosRef">
+				  
+			#! InputMacro(macroname, description, xpos, ypos, color, defaultVisibility, textPositionNorth)
+			#! OutputMacro(macroname, description, xpos, ypos, color, defaultVisibility, textPositionNorth)
+				</pre>
+<p class="description">
+<b>Listing 10:</b> Macros field visual data</p>
+			
+
+		   
+
+		   <a name="graphicalObjects" href="#toc">
+<h2>2.3.  Graphical Objects</h2>
+</a>
+
+			<a name="line" href="#toc">
+<h3>2.3.1.  Line/Arrow</h3>
+</a>
+				<pre language="VisualDCT" id="lineRef">
+				  
+			#! Line(id, xpos, ypos, xpos2, ypos2, dashed, startArrow, endArrow, color, parentBorderID)
+				</pre>
+<p class="description">
+<b>Listing 11:</b> Line/Arrow visual data</p>
+			
+			
+			<a name="box" href="#toc">
+<h3>2.3.2.  Box</h3>
+</a>
+				<pre language="VisualDCT" id="boxRef">
+				  
+			#! Box(id, xpos, ypos, xpos2, ypos2, dashed, color, parentBorderID)
+				</pre>
+<p class="description">
+<b>Listing 12:</b> Box visual data</p>
+			
+
+			<a name="textBox" href="#toc">
+<h3>2.3.3.  TextBox</h3>
+</a>
+				<pre language="VisualDCT" id="textBoxRef">
+				  
+			#! TextBox(id, xpos, ypos, xpos2, ypos2, border, fontFamilyName, fontSize, fontStyle, color, "text", parentBorderID)
+				</pre>
+<p class="description">
+<b>Listing 13:</b> TextBox visual data</p>
+			
+
+		   
+		   
+		   <a name="dbd" href="#toc">
+<h2>2.4.  DBD Info Block</h2>
+</a>
+
+			<a name="dbd" href="#toc">
+<h3>2.4.1.  DBD Info Block</h3>
+</a>
+				<pre language="VisualDCT" id="dbdRef">
+				  
+			#! DBDSTART
+			#! DBD("DBD filename1")
+			...
+			#! DBD("DBD filenameN")
+			#! DBDEND
+				</pre>
+<p class="description">
+<b>Listing 14:</b> DBD Info Block visual data</p>
+			
+	
+		   
+		   
+		   <a name="misc" href="#toc">
+<h2>2.5.  Miscellaneous</h2>
+</a>
+
+			<a name="skip" href="#toc">
+<h3>2.5.1.  Skip</h3>
+</a>
+				<pre language="VisualDCT" id="skipRef">
+				  
+			// skip one line
+			#! SKIP
+			
+			// skip n lines
+ 			#! SKIP(number of lines)
+				</pre>
+<p class="description">
+<b>Listing 15:</b> Skip visual data</p>
+			
+	
+			<a name="view" href="#toc">
+<h3>2.5.2.  View</h3>
+</a>
+				<pre language="VisualDCT" id="viewRef">
+				  
+			#! View(xoffset, yoffset, scale)
+				</pre>
+<p class="description">
+<b>Listing 16:</b> Workspace view</p>
+			
+
+		   
+
+
+		
+		
+		<a name="conclusion" href="#toc">
+<h1>3.  Conclusion</h1>
+</a>
+			<p>
+				This document will probably change in it the future.
+			</p>
+		
+	<br>
+<br>
+<p align="center">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" background="../../Common/Documentation/images/Cosyline.png">
+<tr height="25px">
+<td valign="top" align="right" style="padding:0;spacing:0;border:solid white 0px;"><img src="../../Common/Documentation/images/Cosylab.png" border="0"></td>
+</tr>
+</table>
+</p>
+</body>
+</html>

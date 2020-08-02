@@ -1,0 +1,150 @@
+--------------------------------------------------------------------
+O) Exceptions
+
+Clicking with a mouse, unsure how to reproduce it exactly. 
+
+Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException
+        at com.cosylab.vdct.graphics.DrawingSurface.mouseDragged(DrawingSurface.java:1220)
+        at com.cosylab.vdct.util.DoubleClickProxy.mouseDragged(DoubleClickProxy.java:119)
+        at java.awt.Component.processMouseMotionEvent(Component.java:6311)
+        at javax.swing.JComponent.processMouseMotionEvent(JComponent.java:3273)
+        at java.awt.Component.processEvent(Component.java:6032)
+        at java.awt.Container.processEvent(Container.java:2041)
+        at java.awt.Component.dispatchEventImpl(Component.java:4630)
+        at java.awt.Container.dispatchEventImpl(Container.java:2099)
+        at java.awt.Component.dispatchEvent(Component.java:4460)
+        at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4574)
+        at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4255)
+        at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
+        at java.awt.Container.dispatchEventImpl(Container.java:2085)
+        at java.awt.Window.dispatchEventImpl(Window.java:2475)
+        at java.awt.Component.dispatchEvent(Component.java:4460)
+        at java.awt.EventQueue.dispatchEvent(EventQueue.java:599)
+        at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+        at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+        at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+        at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+        at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+        at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+--------------------------------------------------------------------
+O) vdct package-f multiple views support 
+
+* morphing template gives a returning null warning
+
+* simplify arrow key supports
+
+Currently the actions are doubled between WorkspaceDesktop and its
+parent component so that no matter which is focused it works.
+The hidden items key inputs do not work anymore in Java 1.6; this
+should be removed.     
+--------------------------------------------------------------------
+O) vdct package-f rdb support 
+
+2.1. basic functionality
+ 
+ -rdb support
+  -general unknowns
+   -id of template only filename?
+
+  -also load description to id
+  -rec_type_code n/e distinction
+
+  -saving with incomplete data
+   -merge new rdbdataid and rdbchooser dialogs
+    -listner on tree writes into editing fields
+    -on load mode disable editing of fields
+   -conversion from partial template to rdbdataid
+   -bring up dialog to insert missing data
+    -fill in guesses for the values
+   -replace current id data at saveas
+
+2.2. other functionality
+
+  -view is not refreshed at load from db
+
+  -window creation on successful loading
+   -opening database files when ds not present
+   -separate data conversions and checking to dsmanager
+    -setting cursors
+    -setting undo monitoring
+    -consistency checks
+    -garbage collecion
+   -garbage collection in finalize
+
+  -database gui improvements
+   -display descriptions of rdbdatas in the tree
+   -make tree dialog less wide
+   -state dialog when more time can pass
+
+  -database access
+   -structural database access updates
+    -create id retrieve id discrepancy
+     -use last inserted id for this
+     -generic getlast function for oracle compatibility
+
+2.3. nondefinite functionality
+
+   -database access optimization
+    -additive to start remove database access
+     -single row: .5d
+     -multirow: 1.5d
+     -speed up: currently two queries per field
+    -faster query/insert/update with table operations
+    -generic managerow function
+    -extend to 2d values passing
+
+   -improving database access guis
+    -removing/renaming db records in the database, new iocs
+     -adding of new iocs when nonexistant in the database
+     -addnewdialog has editable combobox
+    -make one click less choosing versions during loading/saving
+
+   -validation
+    -check data based definition for all unknown fields
+     -all tables you add to
+     -specify known
+     -make a list of unknown to be asked
+     -include rec_type_code
+
+   -database template support
+    -database tables
+     -port table foreign key group
+     -template instance table foreign key group
+     -macro foreign key template instance
+    -functionality
+     -in memory template loading from rd
+    -validation
+     -templates in editing mode influence on operations
+--------------------------------------------------------------------
+3. vdct package-e new features
+  -grouping of columns
+   -new boolean option that groups columns by promptgroup
+   -storing this option
+   -column dragging
+    -perform operation
+    -read out order of groups,   
+    -create new order and refresh
+   -on column hidding
+    -perform operation on the whole group
+ 
+  -saving of views, choosing them from the menu
+   -data structure for storing orders
+   -seriallization to disk
+   -custom order option, dialog for choosing a name
+--------------------------------------------------------------------
+O) macros, ports
+
+* macro port synchronization
+ -same name macro/port distinction on template sync
+ 
+* partial macro persistence 
+currently only the macros that are marked as shown are written to
+file; Matej has to tell why this was made in this way 
+--------------------------------------------------------------------
+O) cosmetics
+  -snap to grid before displaying objects on copy
+  -empty undo action when importing files/undoable import
+   -also check loading/saving from rdb
+  -switch message and title on printing error dialogs
+--------------------------------------------------------------------
+  

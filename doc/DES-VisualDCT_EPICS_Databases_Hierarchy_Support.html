@@ -1,0 +1,611 @@
+<html xmlns:d="urn:schemas-cosylab-com:Document">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>VisualDCT EPICS Databases Hierarchy Support</title>
+<style>.title 
+{
+  color: #CE2B25; 
+  font-size: 200%;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+  color: #003c8c;
+  text-align: left; 
+  margin-top: 2em; 
+  margin-bottom: 1em; 
+  font-family: Verdana, Arial, Helvetica; 
+}
+
+h2 
+{ 
+  color: #CE2B25; 
+}
+
+h1.toc, h2.toc, h3.toc, h4.toc, h5.toc, h6.toc
+{
+  color: #003c8c;
+  font-size: small;
+  text-align: left;
+  margin-right: 0%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+h1.toc
+{
+  margin-left: 3%;
+  font-weight: bold;
+}
+
+h2.toc
+{
+  margin-left: 6%;
+}
+
+h3.toc
+{
+  margin-left: 9%;
+}
+
+h4.toc
+{
+  margin-left: 12%;
+}
+
+h5.toc
+{
+  margin-left: 15%;
+}
+
+h6.toc
+{
+  margin-left: 18%;
+}
+
+body 
+{
+  margin-left: 5%; 
+  margin-right: 5%;
+}
+
+p
+{
+  font-family: Verdana, Arial, Helvetica;
+}
+
+p.table
+{
+  text-align: left;
+  margin-bottom: 0cm;
+}
+
+p.figure
+{ 
+  text-align: center
+}
+
+p
+{
+  text-align: justify;
+}
+
+p.comment
+{
+  color: red;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+p.warning
+{
+  background-color: #E0E0E0;
+}
+
+p.warning table tr td
+{
+  border-width: 0.02cm; 
+  border-color: red;
+}
+
+p.notice
+{
+  background-color: #F0F0F0;
+}
+
+p.notice table tr td
+{
+  border-width: 0.02cm; 
+  border-color: black;
+}
+
+ol, ul
+{
+  font-family: verdana,sans-serif;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 0%;
+}
+
+pre
+{
+  background: #F0F0F0;
+}
+
+table
+{
+  width: 100%;
+  margin-bottom: 0cm;
+}
+
+th
+{ 
+  padding: 0.1cm;
+  background: #CACAD4; 
+  text-align: center; 
+  border-style: solid; 
+  border-width: 0.02cm;
+}
+
+th.header
+{
+  background: #D0D0D0;
+}
+
+td
+{
+  padding: 0.1cm;
+  border-style: solid;
+  border-width: 0.02cm;
+}
+
+table.equation tr td
+{
+  border-width: 0;
+}
+
+tr.reviewAccepted 
+{
+  background: #D0FFD0;
+}
+
+tr.reviewRejected
+{
+  background: #FFD0D0;
+}
+
+tr.retirement
+{
+  background: black;
+  color: white
+}
+
+span.menu
+{
+  color: white;
+  background: #787996;
+  font-family: tahoma;
+  font-size: 80%;
+}
+
+span.gui
+{
+  border-left-width: 0.025cm;
+  border-top-width: 0.025cm;
+  border-right-width: 0.04cm;
+  border-bottom-width: 0.04cm;
+  border-style: solid;
+  font-family: tahoma;
+  font-size: 80%
+}
+
+span.keystroke
+{            
+  border-style: groove;
+  border-color: #E0E0E0;
+  font-family: tahoma;
+  font-size: 70%;
+}
+
+span.emphasis
+{
+  font-style: italic;
+}
+
+span.bold
+{
+  font-weight: bold;
+}
+
+tt.filename
+{
+  font-family: tahoma;
+}
+
+tt.keyword
+{
+  font-weight: bold;
+}
+
+tt.command
+{
+  font-family: tahoma; 
+  font-weight: bold;
+}
+
+p.description 
+{
+  text-align: center;
+  margin-top: 0cm;
+}
+</style>
+</head>
+<script language="JavaScript"><!--
+        function mailTo(part2, part1) {
+          window.location.href = "mailto:" + part1 + part2;
+        }
+
+        function fullMailTo(part2, part1, subject, body) {
+          var i;
+          var body2 = "";
+
+          for(i = 0; i < body.length; ++i)
+          {
+            if(body.charAt(i) == '\n')
+            {
+              body2 += "%0d%0a";
+            }
+            else
+            {
+              body2 += body.charAt(i);
+            }
+          }
+          
+          window.location.href = "mailto:" + part1 + part2 + "?subject=" + subject + "&body=" + body2;
+        }
+      --></script>
+<body>
+<p class="table">
+<table>
+<tr>
+<th colspan="2" class="title">VisualDCT EPICS Databases Hierarchy Support</th>
+</tr>
+<tr>
+<th class="projectInfo">Project:</th><td>VisualDCT&nbsp;</td>
+</tr>
+<tr>
+<th class="projectInfo">Classification:</th><td>Design Document</td>
+</tr>
+<tr>
+<th class="projectInfo">Identification:</th><td><tt>CSL-DES-02-XX</tt></td>
+</tr>
+<tr>
+<th colspan="2">Copyright © 2002 by Cosylab Ltd. All Rights Reserved.</th>
+</tr>
+</table>
+</p>
+<h2>Document History</h2>
+<p class="table">
+<table>
+<tr>
+<th>Revision</th><th>Date</th><th>Author</th><th>Section</th><th>Modification</th>
+</tr>
+<tr>
+<td rowspan="2">1.0</td><td rowspan="2">2002-08-20</td><td rowspan="2"><a href="javascript:mailTo(%22j.sekoranja@cosylab.com%22,%22mate%22);">Matej Sekoranja</a></td>
+</tr>
+<tr>
+<td>all</td><td>Created from the document written by A. Johnson and J. Maclean.</td>
+</tr>
+</table>
+</p>
+<h2>Scope</h2>
+<p>
+<scope xmlns="urn:schemas-cosylab-com:Document">
+			This document presents a new EPICS databases hierarchy mechanism used by VisualDCT and it is a proposal for EPICS database model for Base R3.15 and later.
+			<p>
+			The document is based on discussion between Andrew Johnson, John Maclean and Matej Sekoranja.
+			</p>
+		</scope>
+</p>
+<h2>Confidentiality</h2>
+<p>
+          This document is classified as a <b>public document</b>.
+          Redistribution and use, with or without modification, are permitted provided that:
+          <ol>
+<li>the copyright notice is retained</li>
+<li>a reference to the original document is made in case of modifications</li>
+<li>this document may not be distributed for profit except as explicitly permitted by valid licenses.</li>
+</ol>
+</p>
+<h2>
+<a name="Audience">Audience</a>
+</h2>
+<p>
+<audience>
+			The audience of this document are all EPICS DB developers and users.
+		</audience>
+</p>
+<h2>References</h2>
+<p class="table">
+<table>
+<tr>
+<th>ID</th><th>Author</th><th>Reference</th><th>Revision</th><th>Date</th><th>Publisher</th>
+</tr>
+<tr>
+<td><a name="visualdct">1</a></td><td>Matej Sekoranja</td><td><a target="_blank" href="http://visualdct.cosylab.com/">VisualDCT Project</a></td><td> </td><td>2002</td><td>Cosylab, Ltd.</td>
+</tr>
+</table>
+</p>
+<h2>
+<a name="toc">Table of Contents</a>
+</h2>
+<a href="#intro">
+<h1 class="toc">1. Introduction</h1>
+</a><a href="#syntax">
+<h1 class="toc">2. New Syntax</h1>
+</a><a href="#flattening">
+<h1 class="toc">3. Flattening Template Hierarchies</h1>
+</a><a href="#EBNFG">
+<h1 class="toc">4. Extended Backus Naur Form Grammar</h1>
+</a><a href="#files">
+<h1 class="toc">5. Example DBs</h1>
+</a>
+<h2>How to Read this Document</h2>
+<p>
+       This document's meta-information (authors, revision history, table of contents, ...) can be found above.
+       What follows below is the body of the document.
+       The body is composed of several sections, which may be further composed of subsections.
+     </p>
+<p>
+       Typographical styles are used to denote entities of different kinds.
+       For a full list of entities and their respective typographic conventions, please refer to the <a href="../../Management/Documentation/DOC-XML_Documentation.xml#xmlContentStyles">Styles section of the XML Documentation</a> document.
+     </p>
+<p>
+       When viewing the document in a non-printed form, it is possible to submit comments regarding a given section to the document's owner.
+       This is achieved by clicking the mail icon next to the section title.
+       For this to work, your mail must be configured to properly handle the <tt>mailto</tt> URLs.
+     </p>
+		<a name="intro" href="#toc">
+<h1>1.  Introduction</h1>
+</a>
+			<p>
+				The current EPICS template substitution mechanism is very restricted in its
+				capabilities.  It requires two input files (.<tt class="filename">template</tt> and <tt class="filename">.substitutions</tt>) that
+				have radically different syntaxes, and it only allows macros to be passed
+				downwards into a template instance.  Hierarchical templates as implemented by
+				VisualDCT must allow macro values to be passed into the template instance (giving
+				values for fields within the expanded template), and values to be exported from
+				the template instance to the higher level (usually the destination field name
+				for a link in a record defined in the higher level <tt class="filename">.vdb</tt> file).
+			</p>
+		
+		
+		<a name="syntax" href="#toc">
+<h1>2.  New Syntax</h1>
+</a>
+			<p>
+				We propose adding two statements to the database file format and modifying the
+				macro naming syntax slightly to implement true hierarchical behaviour.  Macros
+				are defined in an <tt class="keyword">expand</tt> statement and pass information into a template; ports
+				are a kind of macro defined in a <tt class="keyword">template</tt> statement that pass information
+				upwards out of a template instance to their calling database.  Here's an
+				example of a top-level file using the proposed syntax:
+			</p>
+			<pre language="EPICS DB" id="template_example">
+			  
+	record(calc,"slide1:error") {
+	  field(INPA, "$(slmot1.position)")
+	  ...
+	}
+	
+	expand("slideMotor.vdb", slmot1) {
+	  macro(name, "sm1")
+	  macro(address, "4")
+	  macro(demand, "slide1:demand.VAL")
+	}
+	
+	record(ao,"slide1:speed") {
+	  field(OUTP, "$(slmot1.speed)")
+	  field(DTYP, "Soft Channel")
+	  ...
+	}
+			</pre>
+<p class="description">
+<b>Listing 1:</b> Simple database with new expansion syntax.</p>
+			<p>
+				Note that we're using the macro syntax <tt class="keyword">$(template_instance_name.port_name)</tt> to
+				bring port values from the template instance into the higher level diagram. 
+				Unfortunately we have to allow port macros to be used before the related expand
+				statement appears in the parent <tt class="filename">.vdb</tt> file, so the database flattening tool will
+				have to make two passes through the data and should also detect loops in
+				port/macro definitions.
+			</p>
+			<p>
+				When performing macro substitutions within strings, if a macro name is
+				undefined the macro name and its surrounding <tt class="keyword">$()</tt> characters will be left
+				unchanged in the flat <tt class="filename">.db</tt> file.  This allows templates to be used when creating
+				a database that still takes macro arguments on loading with <tt class="keyword">dbLoadRecords()</tt>. 
+				For undefined port macros though an error should probably be reported instead
+				(but remember that these can't be properly checked and substituted until all
+				<tt class="keyword">expand</tt> statements and their related templates have been read in).
+			</p>
+			<p>
+				Inside the template file <tt class="filename">slideMotor.vdb</tt>, we can define ports using the new
+				<tt class="keyword">template</tt> statement. Ports are usually going to contain <tt class="keyword">record.field</tt> names, but
+				they can be literal strings and may use macros in their value:
+			</p>
+			<pre language="EPICS DB" id="slideMotor.vdb">
+			  
+	template("Description of the Slide Motor template...") {
+	  port(speed, "$(name):speed.VAL", "Record to set motor speed mm/sec")
+	  port(go, "$(name):startmoving", "Forward link to this to cause movement")
+	  port(position, "$(motor.position)", "Current position of the slide")
+	  port(greet, "Hello, world!", "Just being friendly...")
+	}
+	record(ai, "$(name):speed") {
+	  ...
+	}
+	record(ai, "$(name):dest") {
+	  field(INP, "$(demand)")
+	  ...
+	}
+	record(calc, "$(name):startmoving") {
+	  ...
+	}
+	expand("motor.vdb", motor) {
+	  macro(address, "$(address)")
+	  ...
+	}
+			</pre>
+<p class="description">
+<b>Listing 2:</b> slideMotor.vdb database with new template block.</p>
+			<p>
+				Note that a <tt class="keyword">template</tt> statement is optional; if a template file doesn't need to
+				export any data to its parent it doesn't have to have one. The string argument
+				provides a place for the user to put some descriptive text. Multiple template
+				statements are allowed, although only the first description string will be
+				used.  If a port name is repeated either within a single <tt class="keyword">template</tt> statement or
+				in subsequent ones, only the first definition is used - later redefinitions
+				will be ignored.  An empty <tt class="keyword">template</tt> statement may also be used if desired to
+				document this database as a template, and would look like this (the parentheses
+				and braces are required if the <tt class="keyword">template</tt> keyword is present):
+			</p>
+			<pre language="EPICS DB" id="template_empty">
+	template () {}
+			</pre>
+			<p>
+				Similarly an <tt class="keyword">expand</tt> statement doesn't have to define any macros, but the braces
+				are still mandatory:
+			</p>
+			<pre language="EPICS DB" id="expand_example">
+	expand ("subsys.vdb", ss) {}
+			</pre>
+			<p>
+				There are a couple of interesting and subtle differences between the above
+				empty <tt class="keyword">expand</tt> statemend and the statement:
+			</p>
+			<pre language="EPICS DB" id="include_example">
+	include "subsys.vdb"
+			</pre>
+			<p>
+				There may be circumstances where a template designer might use an <tt class="keyword">include</tt>
+				statement rather than an <tt class="keyword">expand</tt> statement. If the <tt class="filename">subsys.vdb</tt> file defines some
+				port values for the parent to use, the expand statement makes those port values
+				available within this <tt class="filename">.db</tt> file as <tt class="keyword">$(ss.port_name)</tt>.  Using an include statement
+				those port values will be made available to the parent <tt class="filename">.db</tt> file instead.  Also
+				an <tt class="keyword">expand</tt> statement with no macro definitions will not pass any macro values to
+				the <tt class="filename">subsys.vdb</tt> file, whereas by using an include statement the <tt class="filename">subsys.vdb</tt> file
+				will have full access to all the macros defined by the parent for use in this
+				<tt class="filename">.db</tt> file.
+
+				Thus an include statement is useful where there are a collection of related
+				templates that a designer wishes to combine into a single template without
+				having to instantiate each one separately and pass a common set of macros into.
+			</p>
+		
+		
+		<a name="flattening" href="#toc">
+<h1>3.  Flattening Template Hierarchies</h1>
+</a>
+			<p>
+				VisualDCT will be the first tool that is capable of flattening this new database
+				hierarchy syntax (<tt class="keyword">capFast</tt> designs have always had similar hierarchical template
+				capabilities), although at least one other will be produced in Base R3.15 for
+				use with <tt class="keyword">gnumake</tt>.  The flattening process involves expanding all templates and
+				replacing the macro and port macro variables with their strings.  If a macro
+				name is found that has no definition within its scope, it will be left exactly
+				as it was found, which allows load-time macros to be used.  We also strongly
+				recommend that flattening tools mark the beginning and end of each template
+				file in the flat database file using a comment as follows, to provide a way for
+				other tools to refer back to the original template from the flat file:
+			</p>
+			<pre language="EPICS DB" id="flatten_db">
+			  
+	  # expand("/full/path/to/template.vdb", instance_name)
+
+	  ... expanded contents of template.vdb
+
+	  # end (instance_name)
+			</pre>
+<p class="description">
+<b>Listing 3:</b> An example of flatten DB.</p>
+			<p>
+				Note that templates that expand other sub-templates should nest as appropriate,
+				but this implies that the flattening tool (Road-roller? Steam-iron?) must
+				maintain the nesting properly in the output.
+			</p>
+		
+
+		<a name="EBNFG" href="#toc">
+<h1>4.  Extended Backus Naur Form Grammar</h1>
+</a>
+			<p>
+				Space, tab and newline characters are permitted and ignored between most
+				of the tokens below, other than inside a macro name or string.
+			</p>
+			<p>
+			<pre language="text" id="EBNFG_review">
+			  
+	? means the token preceeding is allowed 0 or 1 times
+	* means the token preceeding is allowed 0 or more times
+	+ means the token preceeding is allowed 1 or more times
+	.. signifies the end of a definition.
+			</pre>
+<p class="description">
+<b>Listing 4:</b> A short review of EBNFG.</p>
+			</p>
+			<pre language="EBNFG" id="EBNFG_syntax">
+			  
+	macronamechar = [a-zA-Z0-9_:-] .
+	macroname_definition = macronamechar+ |
+		'"' macronamechar+ '"' .
+
+	macro_expansion = '$(' macronamechar+ ')' .
+	port_expansion = '$(' macronamechar+ '.' macronamechar+ ')' .
+
+	string_element = [^"] | '\"' | macro_expansion | port_expansion .
+	quotedstring = '"' string_element* '"' .
+
+	string = macronamechar+ |
+		quotedstring .
+
+	noteol = [^\n] .
+	comment = '#' noteol* .
+
+
+	macro_definition = comment |
+		('macro' '(' macroname_definition ',' string ')') .
+
+	expand = 'expand' '(' quotedstring ',' macroname_definition ')'
+		'{' macro_definition* '}' .
+
+
+	port_definition = comment |
+		('port' '(' macroname_definition ',' string ( ',' quotedstring)? ')') .
+
+	template = 'template' '(' quotedstring? ')'
+		'{' port_definition* '}' .
+			</pre>
+<p class="description">
+<b>Listing 5:</b> An EBNFG syntax of new keywords.</p>
+
+		
+
+		<a name="files" href="#toc">
+<h1>5.  Example DBs</h1>
+</a>
+			<p>
+				<a href="files/exampleDBs.zip" target="_blank">Download example DBs</a> demonstrating hierarchical capabilities.
+			</p>
+		
+	<br>
+<br>
+<p align="center">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" background="../../Common/Documentation/images/Cosyline.png">
+<tr height="25px">
+<td valign="top" align="right" style="padding:0;spacing:0;border:solid white 0px;"><img src="../../Common/Documentation/images/Cosylab.png" border="0"></td>
+</tr>
+</table>
+</p>
+</body>
+</html>

@@ -1,0 +1,506 @@
+<html xmlns:d="urn:schemas-cosylab-com:Document">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>VisualDCT Hierarchy Additions</title>
+<style>.title 
+{
+  color: #CE2B25; 
+  font-size: 200%;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+  color: #003c8c;
+  text-align: left; 
+  margin-top: 2em; 
+  margin-bottom: 1em; 
+  font-family: Verdana, Arial, Helvetica; 
+}
+
+h2 
+{ 
+  color: #CE2B25; 
+}
+
+h1.toc, h2.toc, h3.toc, h4.toc, h5.toc, h6.toc
+{
+  color: #003c8c;
+  font-size: small;
+  text-align: left;
+  margin-right: 0%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+h1.toc
+{
+  margin-left: 3%;
+  font-weight: bold;
+}
+
+h2.toc
+{
+  margin-left: 6%;
+}
+
+h3.toc
+{
+  margin-left: 9%;
+}
+
+h4.toc
+{
+  margin-left: 12%;
+}
+
+h5.toc
+{
+  margin-left: 15%;
+}
+
+h6.toc
+{
+  margin-left: 18%;
+}
+
+body 
+{
+  margin-left: 5%; 
+  margin-right: 5%;
+}
+
+p
+{
+  font-family: Verdana, Arial, Helvetica;
+}
+
+p.table
+{
+  text-align: left;
+  margin-bottom: 0cm;
+}
+
+p.figure
+{ 
+  text-align: center
+}
+
+p
+{
+  text-align: justify;
+}
+
+p.comment
+{
+  color: red;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+p.warning
+{
+  background-color: #E0E0E0;
+}
+
+p.warning table tr td
+{
+  border-width: 0.02cm; 
+  border-color: red;
+}
+
+p.notice
+{
+  background-color: #F0F0F0;
+}
+
+p.notice table tr td
+{
+  border-width: 0.02cm; 
+  border-color: black;
+}
+
+ol, ul
+{
+  font-family: verdana,sans-serif;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 0%;
+}
+
+pre
+{
+  background: #F0F0F0;
+}
+
+table
+{
+  width: 100%;
+  margin-bottom: 0cm;
+}
+
+th
+{ 
+  padding: 0.1cm;
+  background: #CACAD4; 
+  text-align: center; 
+  border-style: solid; 
+  border-width: 0.02cm;
+}
+
+th.header
+{
+  background: #D0D0D0;
+}
+
+td
+{
+  padding: 0.1cm;
+  border-style: solid;
+  border-width: 0.02cm;
+}
+
+table.equation tr td
+{
+  border-width: 0;
+}
+
+tr.reviewAccepted 
+{
+  background: #D0FFD0;
+}
+
+tr.reviewRejected
+{
+  background: #FFD0D0;
+}
+
+tr.retirement
+{
+  background: black;
+  color: white
+}
+
+span.menu
+{
+  color: white;
+  background: #787996;
+  font-family: tahoma;
+  font-size: 80%;
+}
+
+span.gui
+{
+  border-left-width: 0.025cm;
+  border-top-width: 0.025cm;
+  border-right-width: 0.04cm;
+  border-bottom-width: 0.04cm;
+  border-style: solid;
+  font-family: tahoma;
+  font-size: 80%
+}
+
+span.keystroke
+{            
+  border-style: groove;
+  border-color: #E0E0E0;
+  font-family: tahoma;
+  font-size: 70%;
+}
+
+span.emphasis
+{
+  font-style: italic;
+}
+
+span.bold
+{
+  font-weight: bold;
+}
+
+tt.filename
+{
+  font-family: tahoma;
+}
+
+tt.keyword
+{
+  font-weight: bold;
+}
+
+tt.command
+{
+  font-family: tahoma; 
+  font-weight: bold;
+}
+
+p.description 
+{
+  text-align: center;
+  margin-top: 0cm;
+}
+</style>
+</head>
+<script language="JavaScript"><!--
+        function mailTo(part2, part1) {
+          window.location.href = "mailto:" + part1 + part2;
+        }
+
+        function fullMailTo(part2, part1, subject, body) {
+          var i;
+          var body2 = "";
+
+          for(i = 0; i < body.length; ++i)
+          {
+            if(body.charAt(i) == '\n')
+            {
+              body2 += "%0d%0a";
+            }
+            else
+            {
+              body2 += body.charAt(i);
+            }
+          }
+          
+          window.location.href = "mailto:" + part1 + part2 + "?subject=" + subject + "&body=" + body2;
+        }
+      --></script>
+<body>
+<p class="table">
+<table>
+<tr>
+<th colspan="2" class="title">VisualDCT Hierarchy Additions</th>
+</tr>
+<tr>
+<th class="projectInfo">Project:</th><td>VisualDCT&nbsp;</td>
+</tr>
+<tr>
+<th class="projectInfo">Classification:</th><td>Specification</td>
+</tr>
+<tr>
+<th class="projectInfo">Identification:</th><td><tt>CSL-SPE-02-XX</tt></td>
+</tr>
+<tr>
+<th colspan="2">Copyright © 2002 by Cosylab Ltd. All Rights Reserved.</th>
+</tr>
+</table>
+</p>
+<h2>Document History</h2>
+<p class="table">
+<table>
+<tr>
+<th>Revision</th><th>Date</th><th>Author</th><th>Section</th><th>Modification</th>
+</tr>
+<tr>
+<td rowspan="2">1.0</td><td rowspan="2">2002-11-26</td><td rowspan="2"><a href="javascript:mailTo(%22j.sekoranja@cosylab.com%22,%22mate%22);">Matej Sekoranja</a></td>
+</tr>
+<tr>
+<td>all</td><td>Created.</td>
+</tr>
+<tr>
+<td rowspan="2">1.1</td><td rowspan="2">2003-07-18</td><td rowspan="2"><a href="javascript:mailTo(%22j.sekoranja@cosylab.com%22,%22mate%22);">Matej Sekoranja</a></td>
+</tr>
+<tr>
+<td>all</td><td>Updated to reflect implementation.</td>
+</tr>
+</table>
+</p>
+<h2>Scope</h2>
+<p>
+<scope xmlns="urn:schemas-cosylab-com:Document">
+			This document specifies further additions to the hierarchy mechanism of VisualDCT to be implemented in the future releases.
+			<p>
+			The document is based on discussion between Andrew Johnson, John Maclean, Rozelle Wright and Matej Sekoranja held at APS on 25th November 2002.
+			</p>
+		</scope>
+</p>
+<h2>Confidentiality</h2>
+<p>
+          This document is classified as a <b>public document</b>.
+          Redistribution and use, with or without modification, are permitted provided that:
+          <ol>
+<li>the copyright notice is retained</li>
+<li>a reference to the original document is made in case of modifications</li>
+<li>this document may not be distributed for profit except as explicitly permitted by valid licenses.</li>
+</ol>
+</p>
+<h2>
+<a name="Audience">Audience</a>
+</h2>
+<p>
+<audience>
+			The audience of this document are all EPICS DB developers and users.
+		</audience>
+</p>
+<h2>References</h2>
+<p class="table">
+<table>
+<tr>
+<th>ID</th><th>Author</th><th>Reference</th><th>Revision</th><th>Date</th><th>Publisher</th>
+</tr>
+<tr>
+<td><a name="visualdct">1</a></td><td>Matej Sekoranja</td><td><a target="_blank" href="http://visualdct.cosylab.com/">VisualDCT Project</a></td><td> </td><td>2002</td><td>Cosylab, Ltd.</td>
+</tr>
+<tr>
+<td><a name="hierarchies">2</a></td><td>Matej Sekoranja</td><td><a target="_blank" href="http://visualdct.cosylab.com/">VisualDCT EPICS Databases Hierarchy Support</a></td><td> </td><td>2002</td><td>Cosylab, Ltd.</td>
+</tr>
+</table>
+</p>
+<h2>
+<a name="toc">Table of Contents</a>
+</h2>
+<a href="#symbol">
+<h1 class="toc">1. Template instance symbol</h1>
+</a><a href="#ports">
+<h1 class="toc">2. Ports</h1>
+</a><a href="#portsll">
+<h2 class="toc">2.1. Lower Level</h2>
+</a><a href="#portshl">
+<h2 class="toc">2.2. Higher Level</h2>
+</a><a href="#macros">
+<h1 class="toc">3. Macros</h1>
+</a><a href="#macrosll">
+<h2 class="toc">3.1. Lower Level</h2>
+</a><a href="#macroshl">
+<h2 class="toc">3.2. Higher Level</h2>
+</a>
+<h2>How to Read this Document</h2>
+<p>
+       This document's meta-information (authors, revision history, table of contents, ...) can be found above.
+       What follows below is the body of the document.
+       The body is composed of several sections, which may be further composed of subsections.
+     </p>
+<p>
+       Typographical styles are used to denote entities of different kinds.
+       For a full list of entities and their respective typographic conventions, please refer to the <a href="../../Management/Documentation/DOC-XML_Documentation.xml#xmlContentStyles">Styles section of the XML Documentation</a> document.
+     </p>
+<p>
+       When viewing the document in a non-printed form, it is possible to submit comments regarding a given section to the document's owner.
+       This is achieved by clicking the mail icon next to the section title.
+       For this to work, your mail must be configured to properly handle the <tt>mailto</tt> URLs.
+     </p>
+		<a name="symbol" href="#toc">
+<h1>1.  Template instance symbol</h1>
+</a>
+			<p>
+			After implementing new additions template instance symbol should look like this:
+			</p>
+			<p class="figure">
+<img src="SPE-VisualDCT_Hierarchy_Additions/template.png" onclick="window.open('SPE-VisualDCT_Hierarchy_Additions/template.png', '', 'menubar=0,status=0,toolbar=0,width=640,height=480,resizable=1');"><p class="description">
+<b>Figure 1:</b> Template instance symbol</p>
+</p>
+			<p class="comment">
+      [<a href="javascript:mailTo(%22j.sekoranja@cosylab.com%22,%22mate%22);">Matej Sekoranja</a>]
+      I find having 2 columns (sides) very useful - to separate inputs (left size) from outputs (right side).</p>
+		
+		<a name="ports" href="#toc">
+<h1>2.  Ports</h1>
+</a>
+			<p>
+				Ports are used to pass information upwards out of a template instance to their calling database (to higher level), i.e. taking a string (link name or constant) out of a template instance.
+			</p>
+			<p>
+			All additional visual data used by VisualDCT is stored as comments in the template block statement.
+			</p>
+			<a name="portsll" href="#toc">
+<h2>2.1.  Lower Level</h2>
+</a>
+				<p>
+				All ports have to be defined in the lower level schamantics. Just after creating a new port, done simply by mouse clicking, user has to determine the type of the port.
+				<br>
+				There are three different port types:
+				</p>
+				<ul>
+				  <li>
+<img src="SPE-VisualDCT_Hierarchy_Additions/inport.png"><span class="bold">INPUT</span> - port passing a name of <tt class="keyword">INPUT</tt> type field.</li>
+				  <li>
+<img src="SPE-VisualDCT_Hierarchy_Additions/outport.png"><span class="bold">OUTPUT</span> - port passing a name of <tt class="keyword">OUTPUT</tt> type field.</li>
+				  <li>
+<img src="SPE-VisualDCT_Hierarchy_Additions/constport.png"><span class="bold">CONSTANT</span> - port passing a constant value.</li>
+				</ul>
+				<p>
+				There should also be a possiblity of defining a default state port vislibility (inspector, context sensitive pop-up menu).
+				</p>
+				<p class="comment">
+      [<a href="javascript:mailTo(%22j.sekoranja@cosylab.com%22,%22mate%22);">Matej Sekoranja</a>]
+      To provide possibility of definining kind of a function (e.g. <tt class="keyword">"(field name) PP"</tt>), VDCT data should look like this:
+					<pre language="VDCT" id="visdefport">
+	port("port name", "expression", "desc")
+	#! InputPort("port name", "target field name", xpos, ypos, colour, defaultVisibility)
+					  
+					</pre>
+<p class="description">
+<b>Listing 1:</b> Visual definition of a port.</p>
+				</p>
+			
+			<a name="portshl" href="#toc">
+<h2>2.2.  Higher Level</h2>
+</a>
+				<p>
+				At the higher level ports are represented as shown in section <a href="#symbol">Template instance symbol</a>.
+				</p>
+				<p>
+				In the inspector user has to have the availability of overriding the default visibility of the ports.
+				</p>
+			
+		
+
+		<a name="macros" href="#toc">
+<h1>3.  Macros</h1>
+</a>
+			<p>
+				Macros are used to pass information downwards into a template instance from their calling database (from higher level), i.e. taking a string (link name or constant) into a template instance.
+			</p>
+			<a name="macrosll" href="#toc">
+<h2>3.1.  Lower Level</h2>
+</a>
+				<p>
+				To have macros visible as links in the higher level, they have to be to be defined in the lower level schamantics. Just after creating a new macro, done simply by mouse clicking, user has to determine the type of the macro.
+				<br>
+				There are two different macro types:
+				</p>
+				<ul>
+				  <li>
+<img src="SPE-VisualDCT_Hierarchy_Additions/inmacro.png"><span class="bold">INPUT</span> - macro passing a name of <tt class="keyword">INPUT</tt> type field.</li>
+				  <li>
+<img src="SPE-VisualDCT_Hierarchy_Additions/outmacro.png"><span class="bold">OUTPUT</span> - macro passing a name of <tt class="keyword">OUTPUT</tt> type field.</li>
+				</ul>
+				<p>
+				There should also be a possiblity of defining a default state macro vislibility (inspector, context sensitive pop-up menu).
+				</p>
+				<p class="comment">
+      [<a href="javascript:mailTo(%22j.sekoranja@cosylab.com%22,%22mate%22);">Matej Sekoranja</a>]
+      VDCT data should look like this:
+					<pre language="VDCT" id="visdefmacro">
+	macro("macro name", "expression")   // defined in the higher level
+	#! InputMacro("macro name", description, xpos, ypos, colour, defaultVisibility)
+					  
+					</pre>
+<p class="description">
+<b>Listing 2:</b> Visual definition of a macro.</p>
+				</p>
+			
+			<a name="macroshl" href="#toc">
+<h2>3.2.  Higher Level</h2>
+</a>
+				<p>
+				At the higher level ports are represented as shown in section <a href="#symbol">Template instance symbol</a>.
+				</p>
+				<p>
+				In the inspector user has to have the availability of overriding the default visibility of the ports.
+				</p>
+				<p>
+				Creating an ordinary macro (substitution variable), <span class="bold">CONSTANT</span> macro,  can easily achieved by using inspector.
+				</p>
+			
+		
+	<br>
+<br>
+<p align="center">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" background="../../Common/Documentation/images/Cosyline.png">
+<tr height="25px">
+<td valign="top" align="right" style="padding:0;spacing:0;border:solid white 0px;"><img src="../../Common/Documentation/images/Cosylab.png" border="0"></td>
+</tr>
+</table>
+</p>
+</body>
+</html>

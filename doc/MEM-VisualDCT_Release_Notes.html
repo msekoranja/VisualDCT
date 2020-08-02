@@ -1,0 +1,466 @@
+<html xmlns:d="urn:schemas-cosylab-com:Document">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>VisualDCT Release Notes</title>
+<style>.title 
+{
+  color: #CE2B25; 
+  font-size: 200%;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+  color: #003c8c;
+  text-align: left; 
+  margin-top: 2em; 
+  margin-bottom: 1em; 
+  font-family: Verdana, Arial, Helvetica; 
+}
+
+h2 
+{ 
+  color: #CE2B25; 
+}
+
+h1.toc, h2.toc, h3.toc, h4.toc, h5.toc, h6.toc
+{
+  color: #003c8c;
+  font-size: small;
+  text-align: left;
+  margin-right: 0%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+h1.toc
+{
+  margin-left: 3%;
+  font-weight: bold;
+}
+
+h2.toc
+{
+  margin-left: 6%;
+}
+
+h3.toc
+{
+  margin-left: 9%;
+}
+
+h4.toc
+{
+  margin-left: 12%;
+}
+
+h5.toc
+{
+  margin-left: 15%;
+}
+
+h6.toc
+{
+  margin-left: 18%;
+}
+
+body 
+{
+  margin-left: 5%; 
+  margin-right: 5%;
+}
+
+p
+{
+  font-family: Verdana, Arial, Helvetica;
+}
+
+p.table
+{
+  text-align: left;
+  margin-bottom: 0cm;
+}
+
+p.figure
+{ 
+  text-align: center
+}
+
+p
+{
+  text-align: justify;
+}
+
+p.comment
+{
+  color: red;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+p.warning
+{
+  background-color: #E0E0E0;
+}
+
+p.warning table tr td
+{
+  border-width: 0.02cm; 
+  border-color: red;
+}
+
+p.notice
+{
+  background-color: #F0F0F0;
+}
+
+p.notice table tr td
+{
+  border-width: 0.02cm; 
+  border-color: black;
+}
+
+ol, ul
+{
+  font-family: verdana,sans-serif;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 0%;
+}
+
+pre
+{
+  background: #F0F0F0;
+}
+
+table
+{
+  width: 100%;
+  margin-bottom: 0cm;
+}
+
+th
+{ 
+  padding: 0.1cm;
+  background: #CACAD4; 
+  text-align: center; 
+  border-style: solid; 
+  border-width: 0.02cm;
+}
+
+th.header
+{
+  background: #D0D0D0;
+}
+
+td
+{
+  padding: 0.1cm;
+  border-style: solid;
+  border-width: 0.02cm;
+}
+
+table.equation tr td
+{
+  border-width: 0;
+}
+
+tr.reviewAccepted 
+{
+  background: #D0FFD0;
+}
+
+tr.reviewRejected
+{
+  background: #FFD0D0;
+}
+
+tr.retirement
+{
+  background: black;
+  color: white
+}
+
+span.menu
+{
+  color: white;
+  background: #787996;
+  font-family: tahoma;
+  font-size: 80%;
+}
+
+span.gui
+{
+  border-left-width: 0.025cm;
+  border-top-width: 0.025cm;
+  border-right-width: 0.04cm;
+  border-bottom-width: 0.04cm;
+  border-style: solid;
+  font-family: tahoma;
+  font-size: 80%
+}
+
+span.keystroke
+{            
+  border-style: groove;
+  border-color: #E0E0E0;
+  font-family: tahoma;
+  font-size: 70%;
+}
+
+span.emphasis
+{
+  font-style: italic;
+}
+
+span.bold
+{
+  font-weight: bold;
+}
+
+tt.filename
+{
+  font-family: tahoma;
+}
+
+tt.keyword
+{
+  font-weight: bold;
+}
+
+tt.command
+{
+  font-family: tahoma; 
+  font-weight: bold;
+}
+
+p.description 
+{
+  text-align: center;
+  margin-top: 0cm;
+}
+</style>
+</head>
+<script language="JavaScript"><!--
+        function mailTo(part2, part1) {
+          window.location.href = "mailto:" + part1 + part2;
+        }
+
+        function fullMailTo(part2, part1, subject, body) {
+          var i;
+          var body2 = "";
+
+          for(i = 0; i < body.length; ++i)
+          {
+            if(body.charAt(i) == '\n')
+            {
+              body2 += "%0d%0a";
+            }
+            else
+            {
+              body2 += body.charAt(i);
+            }
+          }
+          
+          window.location.href = "mailto:" + part1 + part2 + "?subject=" + subject + "&body=" + body2;
+        }
+      --></script>
+<body>
+<p class="table">
+<table>
+<tr>
+<th colspan="2" class="title">VisualDCT Release Notes</th>
+</tr>
+<tr>
+<th class="projectInfo">Project:</th><td>VisualDCT&nbsp;</td>
+</tr>
+<tr>
+<th class="projectInfo">Classification:</th><td></td>
+</tr>
+<tr>
+<th class="projectInfo">Identification:</th><td><tt>CSL-MEM-02-XX</tt></td>
+</tr>
+<tr>
+<th colspan="2">Copyright © 2002 by Cosylab Ltd. All Rights Reserved.</th>
+</tr>
+</table>
+</p>
+<h2>Document History</h2>
+<p class="table">
+<table>
+<tr>
+<th>Revision</th><th>Date</th><th>Author</th><th>Section</th><th>Modification</th>
+</tr>
+<tr>
+<td rowspan="2">2.2.1236</td><td rowspan="2">2002-08-20</td><td rowspan="2"><a href="javascript:mailTo(%22j.sekoranja@cosylab.com%22,%22mate%22);">Matej Sekoranja</a></td>
+</tr>
+<tr>
+<td>all</td><td>Package B alpha integration build.</td>
+</tr>
+<tr>
+<td rowspan="2">2.3.1237</td><td rowspan="2">2002-10-20</td><td rowspan="2"><a href="javascript:mailTo(%22j.sekoranja@cosylab.com%22,%22mate%22);">Matej Sekoranja</a></td>
+</tr>
+<tr>
+<td>all</td><td>Package B release candidate.</td>
+</tr>
+<tr>
+<td rowspan="2">2.4.1244</td><td rowspan="2">2003-07-18</td><td rowspan="2"><a href="javascript:mailTo(%22j.sekoranja@cosylab.com%22,%22mate%22);">Matej Sekoranja</a></td>
+</tr>
+<tr>
+<td>all</td><td>Package C (full graphical hierarchy support) release candidate.</td>
+</tr>
+<tr>
+<td rowspan="2">2.4.1247</td><td rowspan="2">2003-12-28</td><td rowspan="2"><a href="javascript:mailTo(%22j.sekoranja@cosylab.com%22,%22mate%22);">Matej Sekoranja</a></td>
+</tr>
+<tr>
+<td>all</td><td>Minor bugfixes.</td>
+</tr>
+<tr>
+<td rowspan="2">2.4.1249</td><td rowspan="2">2004-03-30</td><td rowspan="2"><a href="javascript:mailTo(%22j.sekoranja@cosylab.com%22,%22mate%22);">Matej Sekoranja</a></td>
+</tr>
+<tr>
+<td>all</td><td>CapFast interoperability, minor bugfixes.</td>
+</tr>
+<tr>
+<td rowspan="2">2.4.1250</td><td rowspan="2">2004-08-30</td><td rowspan="2"><a href="javascript:mailTo(%22j.sekoranja@cosylab.com%22,%22mate%22);">Matej Sekoranja</a></td>
+</tr>
+<tr>
+<td>all</td><td>Package D1 release candidate.</td>
+</tr>
+<tr>
+<td rowspan="2">2.4.1256</td><td rowspan="2">2004-11-18</td><td rowspan="2"><a href="javascript:mailTo(%22j.sekoranja@cosylab.com%22,%22mate%22);">Matej Sekoranja</a></td>
+</tr>
+<tr>
+<td>all</td><td>Package D2 pre-release.</td>
+</tr>
+<tr>
+<td rowspan="2">2.4.1257</td><td rowspan="2">2005-05-27</td><td rowspan="2"><a href="javascript:mailTo(%22j.sekoranja@cosylab.com%22,%22mate%22);">Matej Sekoranja</a></td>
+</tr>
+<tr>
+<td>all</td><td>Package D2 release.</td>
+</tr>
+<tr>
+<td rowspan="2">2.5.1271</td><td rowspan="2">2004-11-18</td><td rowspan="2"><a href="javascript:mailTo(%22j.sekoranja@cosylab.com%22,%22mate%22);">Matej Sekoranja</a></td>
+</tr>
+<tr>
+<td>all</td><td>Package F release.</td>
+</tr>
+</table>
+</p>
+<h2>Scope</h2>
+<p>
+<scope xmlns="urn:schemas-cosylab-com:Document">
+			This document is contains release notes of the current build.
+		</scope>
+</p>
+<h2>Confidentiality</h2>
+<p>
+          This document is classified as a <b>public document</b>.
+          Redistribution and use, with or without modification, are permitted provided that:
+          <ol>
+<li>the copyright notice is retained</li>
+<li>a reference to the original document is made in case of modifications</li>
+<li>this document may not be distributed for profit except as explicitly permitted by valid licenses.</li>
+</ol>
+</p>
+<h2>
+<a name="Audience">Audience</a>
+</h2>
+<p>
+<audience>
+			The audience of this document are all users of this VisualDCT build.
+		</audience>
+</p>
+<h2>References</h2>
+<p class="table">
+<table>
+<tr>
+<th>ID</th><th>Author</th><th>Reference</th><th>Revision</th><th>Date</th><th>Publisher</th>
+</tr>
+<tr>
+<td><a name="visualdct">1</a></td><td>Matej Sekoranja</td><td><a target="_blank" href="http://visualdct.cosylab.com/">VisualDCT Project</a></td><td> </td><td>2002</td><td>Cosylab, Ltd.</td>
+</tr>
+<tr>
+<td><a name="visualdct_latest">2</a></td><td>Matej Sekoranja</td><td><a target="_blank" href="http://visualdct.cosylab.com/builds/VisualDCT/">VisualDCT latest build</a></td><td>2.5.1271</td><td>2005</td><td>Cosylab, Ltd.</td>
+</tr>
+</table>
+</p>
+<h2>
+<a name="toc">Table of Contents</a>
+</h2>
+<a href="#noted">
+<h1 class="toc">1. Release Notes</h1>
+</a>
+<h2>How to Read this Document</h2>
+<p>
+       This document's meta-information (authors, revision history, table of contents, ...) can be found above.
+       What follows below is the body of the document.
+       The body is composed of several sections, which may be further composed of subsections.
+     </p>
+<p>
+       Typographical styles are used to denote entities of different kinds.
+       For a full list of entities and their respective typographic conventions, please refer to the <a href="../../Management/Documentation/DOC-XML_Documentation.xml#xmlContentStyles">Styles section of the XML Documentation</a> document.
+     </p>
+<p>
+       When viewing the document in a non-printed form, it is possible to submit comments regarding a given section to the document's owner.
+       This is achieved by clicking the mail icon next to the section title.
+       For this to work, your mail must be configured to properly handle the <tt>mailto</tt> URLs.
+     </p>
+		<a name="noted" href="#toc">
+<h1>1.  Release Notes</h1>
+</a>
+			<p>
+			Changes in current version:
+<pre>
+1. VISUALDCT V2.6 BUILD1274
+
+1.1. OVERVIEW
+VisualDCT package E (previouse version) implements advanced spreadseet support (try "View->Spreadsheet...").
+VisualDCT package F implements basic multiple database file editing support.
+Multiple db files are displayed using internal frames and support clipboard operations among them.
+
+
+2. KNOWN ISSUES AND WORKAROUNDS
+
+2.1. LIMITED GLOBAL OVERVIEW OF THE OPENED FILES
+Most of the VDCT functionality, including spreadsheet view, search, inspectors and linking, works on the currently focused db. More time needs to be spent on defining cross db use-cases to implement a more general and useful framework.
+
+2.2. MACRO AND PORT CLIPBOARD OPERATIONS ARE NOT SUPPORTED
+Macro and port objects for a template currently do not work correctly using cut/copy/paste operations. The macros and ports should be added and removed using the popup menu. 
+
+2.3. THE WORKSPACE BLINKS WHEN THE MAIN FRAME IS RESIZED
+This seems to be an issue with Java rendering engine. A workaround is to upgrade to Java 1.6. 
+
+2.4. SPREADSHEET DRAG AND DROP OPERATIONS BLOCK FOR 10 SECONDS OR MORE
+This is an issue with older java 1.4 releases. To resolve this update your java 1.4 version to the latest (java 1.4.2_16).
+
+2.5. OTHER ISSUES
+o) loading a view while having another open at non-default zoom resets the zoom on that window
+o) undoing port creation leaves the port in the template definitions
+o) the internal frame is not redrawn after created or resize operation (Java 1.6 has this resolved)
+o) plugins might need to be fixed for this version
+</pre>
+</p>
+			<p>
+			Disabilities/missing:
+			<ul>
+			  <li>
+<tt class="keyword">include</tt> statement is implemented, but saving files containing <tt class="keyword">include</tt> statements 
+			  	   will also include all the content of includes files.</li>
+			  <li>multiple template definitions in one DB are not supported</li>
+			  <li>user's manual to be completed</li>
+			</ul>
+			</p>
+			<p>
+			</p>
+		
+	<br>
+<br>
+<p align="center">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" background="../../Common/Documentation/images/Cosyline.png">
+<tr height="25px">
+<td valign="top" align="right" style="padding:0;spacing:0;border:solid white 0px;"><img src="../../Common/Documentation/images/Cosylab.png" border="0"></td>
+</tr>
+</table>
+</p>
+</body>
+</html>
